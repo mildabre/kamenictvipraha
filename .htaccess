@@ -1,0 +1,10 @@
+Require all granted
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^localhost$
+RewriteRule (.*) /cli/kamenictvipraha/www/$1
+
+RewriteCond %{HTTP_HOST} !^localhost$
+RewriteRule (.*) /www/$1
+

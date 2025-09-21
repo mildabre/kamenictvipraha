@@ -1,0 +1,26 @@
+application:
+	errorPresenter:
+		4xx: Error:RequestError
+		5xx: Error:ServerError
+
+	mapping: 'App\Modules\*\**Presenter'
+
+	catchExceptions: true
+
+session:
+	expiration: 14 days
+
+di:
+	export:
+		parameters: no
+		tags: no
+
+php:
+	date.timezone: Europe/Prague
+
+latte:
+	templateClass: Bite\Template\DefaultTemplate
+
+parameters:
+	templateFolder: Layout/templates
+	publicFolder: www

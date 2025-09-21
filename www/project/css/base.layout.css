@@ -1,0 +1,87 @@
+body {
+    --base-font-family: system-ui;
+    --lightgrey: #dfe1e1;
+    --metalblack: #3a3d4d;
+    --metalblack-x: #23252f;
+    --metalblack-hover: #3a3d4ddd;
+
+    --sandyellow: #f1f181;
+    --sandyellow-strong: #fafa72;
+
+    /* buttons */
+    --button-color: #313025;
+    --button-color-hover: #313025dd;
+    --button-color-selected: #9e9b76;
+    --button-color-selected-hover: #9e9b76e9;
+
+    /* header/footer */
+    --sandygrey: #bebba3;
+    --sandywarmgrey: #c8c1af;
+    --sandygrey-hover: #a2a08c;
+    --sandyblack: #1b1c15;
+
+    --box-margin: 26px;
+    --box-box-margin: 34px;
+    --section-section-margin: 42px;
+    --box-max-width: 620px;
+    --text-font-size: 16px;
+    --h3-font-size: 18px;
+    --text-line-height: 22px;
+    --text-heading-margin: 22px;
+    --text-margin: 16px;
+    --text-margin-mobile: 12px;
+    --text-max-width: 730px;
+    --slim-text-max-width: 580px;
+    --text-col2-max-width: 840px;
+    --box-slight-indent: 0.4%;
+    --list-item-margin: 5px;
+    --menu-gap: 8px;
+    --slow-transition: background-color 0.25s ease-in-out;
+    --medium-transition: background-color 0.18s ease-in-out;
+    --fast-transition: background-color 0.05s ease-in-out;
+}
+
+body * { box-sizing: border-box;}
+
+table { border-collapse: collapse;}
+table td { vertical-align: top;}
+
+.slow-transition {transition: var(--slow-transition)}
+.medium-transition, a, .standard-button, .slim-button {transition: var(--medium-transition)}
+.fast-transition {transition: var(--fast-transition)}
+
+.nowrap { white-space: nowrap;}
+.text-center { text-align: center;}
+
+.small-button { text-decoration: none; background-color: #555E6787; padding: 2px 12px 4px;  border: none;  border-radius: 3px; color: white;}
+.small-button:hover { background-color: #41484F87;}
+
+.link-button-bar {  display: flex; margin: var(--box-box-margin) 0; }
+
+@media (max-width: 680px)
+{
+    .link-button-bar { justify-content: center; }
+}
+
+/* text */
+
+h1, h2 { font-size: 32px; margin-top: var(--text-heading-margin); margin-bottom: var(--text-heading-margin);}
+h1 { margin: var(--text-heading-margin) 0;}
+h2 { margin: var(--text-margin) 0;}
+h1.heading {margin-top: 0; padding-top: var(--text-heading-margin);}
+h3 { font-size: var(--h3-font-size)}
+
+p, td, tr, li, h3 { line-height: var(--text-line-height);}
+p, ul { margin-top: var(--text-margin); margin-bottom: var(--text-margin); }
+
+ul li { margin-bottom: var(--list-item-margin); }
+ul li:last-child { margin-bottom: 0; }
+ul.dot, ul.not-dot { padding-left:0; margin-left: 3px; }
+ul.dot li { list-style-type:none; padding-left:18px; background:url(images/icons/dot-black.png) no-repeat left -1px; }
+ul.not-dot li { list-style-type:none;  }
+.box ul.dot { margin-left: -3px;}
+
+@media (max-width: 610px)
+{
+    ul.dot li { background-position-y: -2px; /* fix android */ }
+}

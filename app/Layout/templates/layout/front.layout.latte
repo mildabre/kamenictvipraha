@@ -1,0 +1,121 @@
+{templateType App\Layout\Presenter\Types\FrontLayoutTemplate}
+
+{import '../asideBlocks.latte'}
+
+{layout '/base.layout.latte'}
+
+{block 'head'}
+
+    {link('/project/css/front.layout.css')}
+
+    {link('/project/css/headerFooter.css')}
+
+    {link('/project/css/content.css')}
+
+	{link('/bite/js/MenuToggler.js')}
+
+	{link('/bite/js/LinkScroller.js')}
+
+{/block}
+
+
+{block 'siteTitle'}
+	<title>{ifset 'headTitle'}{include 'headTitle'}{else}{ifset 'title'}{include 'title'} - {/ifset}Ing. Miloš Brecher{/ifset}</title>
+{/block}
+
+
+{block 'robots'}
+
+	{if $isProductionServer}
+        <meta name="robots" content="index, follow">
+
+	{else}
+        <meta name="robots" content="noindex, nofollow">
+
+	{/if}
+
+{/block}
+
+
+{block 'analytics'}
+
+	{if $isProductionServer}
+		{read($baseTemplateDir.'/analytics.html', true)}
+	{/if}
+
+{/block}
+
+
+			{***************   body:  **************}
+
+
+{block 'header'}
+
+	<header class="header-banner header-banner-background">
+		<div class="header-super-wrapper header-image">
+			<div class="header-wrapper">
+				<div class="site-title-super-wrapper">
+					<div class="site-title-wrapper">
+						<p class="site-title logo-image">
+							<a class="site-title-link" n:href=":Front:Content:article">
+								<span class="title-line">TEX vývojový projekt</span>
+								<span class="title-line">Ing. Miloš Brecher</span>
+							</a>
+						</p>
+
+						<div class="site-subtitle subtitle-desktop">
+							<p class="site-subtitle-item">18 let praxe webové aplikace</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+{/block}
+
+
+{block 'topMainMenu'}
+	{control 'frontMenu', location: 'top', toggle: true}
+{/block}
+
+
+{block 'bottomMainMenu'}
+	{control 'frontMenu', location: 'bottom', toggle: false}
+{/block}
+
+
+{block 'main'}
+
+	<article class="article">
+
+        {include 'desktopAside'}
+
+        <h1 class="heading">{include 'title'}</h1>
+
+		{include 'article'}
+
+	</article>
+
+{/block}
+
+
+{block 'footer'}
+
+	<footer class="footer-banner footer-banner-background">
+
+		<div class="footer-wrapper">
+			<p class="footer-bar">
+				<span class="footer-snipp">&copy; 2025 &nbsp; Tomáš Čierny</span>
+				<span class="footer-delim">-</span>
+				<span class="footer-snipp">kamenictví, kamenické práce</span>
+				<span class="link-bar">
+					<a class="footer-link" href="https://www.web-expert.cz/" target="_blank">www.web-expert.cz</a>
+				</span>
+			</p>
+		</div>
+
+	</footer>
+
+{/block}

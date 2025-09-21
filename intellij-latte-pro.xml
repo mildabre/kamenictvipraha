@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE latte PUBLIC "-//LATTE//Latte plugin XML V0.0.1//EN" ".idea/intellij-latte-pro/xmlSources/Latte.dtd">
+<latte vendor="mildabre/latte-plugin-common" version="1">
+    <variables>
+        <variable name="navigator" type="Bite\Components\Navigator\Navigator" />
+        <variable name="appDir" type="string" />
+        <variable name="formAssets" type="string" />
+        <variable name="baseTemplateDir" type="string" />
+        <variable name="abstractTemplateDir" type="string" />
+        <variable name="user" type="null" />
+    </variables>
+
+    <filters>
+        <filter name="dmy" inputType="DateTimeInterface|null" description="dd.mm.yyyy">
+            <filterArguments>
+                <filterArgument name="blank" type="string" defaultValue="''"/>
+            </filterArguments>
+        </filter>
+        <filter name="dmi" inputType="DateTimeInterface|null" description="dd.mm.yy">
+            <filterArguments>
+                <filterArgument name="blank" type="string" defaultValue="''"/>
+            </filterArguments>
+        </filter>
+        <filter name="dmy_hi" inputType="DateTimeInterface|null" description="dd.mm.yyyy hh:mm">
+            <filterArguments>
+                <filterArgument name="blank" type="string" defaultValue="''"/>
+            </filterArguments>
+        </filter>
+        <filter name="hi" inputType="DateTimeInterface|null" description="time hh:mm">
+            <filterArguments>
+                <filterArgument name="blank" type="string" defaultValue="''"/>
+            </filterArguments>
+        </filter>
+        <filter name="decimal" inputType="float|int|null" description="00.00" />
+        <filter name="strong" inputType="string|null" description="<strong>" />
+        <filter name="weekDay" inputType="DateTimeInterface" description="Pondělí, Úterý, ..." />
+        <filter name="boolean" inputType="bool|int|null" description="styled boolean label">
+            <filterArguments>
+                <filterArgument name="captions" type="array|null" defaultValue="null"/>
+                <filterArgument name="styled" type="bool|null" defaultValue="null"/>
+            </filterArguments>
+        </filter>
+        <filter name="label" inputType="ActiveRow|null" description="styled enum label">
+            <filterArguments>
+                <filterArgument name="blank" type="string" defaultValue="''"/>
+            </filterArguments>
+        </filter>
+        <filter name="phone" inputType="string|null" description="606 340 677" />
+        <filter name="postcode" inputType="string|null" description="150 00" />
+        <filter name="czk" inputType="string|int|float|null" description="45 Kč" />
+        <filter name="czk2" inputType="string|int|float|null" description="45.50 Kč" />
+        <filter name="percent" inputType="float|null" description="23 %" />
+        <filter name="pieces" inputType="int|null" description="22 ks">
+            <filterArguments>
+                <filterArgument name="caption" type="string|null" defaultValue="' ks'"/>
+                <filterArgument name="blank" type="string|null" defaultValue="null"/>
+            </filterArguments>
+        </filter>
+        <filter name="lcf" inputType="string|null" description="first letter lowercase" />
+        <filter name="ucf" inputType="string|null" description="first letter uppercase" />
+        <filter name="limit" inputType="string|null" description="limit number of characters">
+            <filterArguments>
+                <filterArgument name="number" type="int" />
+            </filterArguments>
+        </filter>
+    </filters>
+
+
+    <functions>
+        <function name="link" returnType="void" documentation="<link> to file in /www">
+            <functionArguments>
+                <functionArgument name="filePath" type="string"/>
+                <functionArgument name="async" type="bool"/>
+            </functionArguments>
+        </function>
+        <function name="read" returnType="void" documentation="reads file content into html">
+            <functionArguments>
+                <functionArgument name="filePath" type="string"/>
+                <functionArgument name="absolute" type="bool"/>
+            </functionArguments>
+        </function>
+        <function name="href" returnType="void" documentation="url from $destination + $args">
+            <functionArguments>
+                <functionArgument name="destination" type="string"/>
+                <functionArgument name="args" type="string|array|null"/>
+            </functionArguments>
+        </function>
+        <function name="join" returnType="string" documentation="join strings with space [ ]">
+        </function>
+        <function name="joinWith" returnType="string" documentation="join strings with $separator + space">
+            <functionArguments>
+                <functionArgument name="separator" type="string|null"/>
+            </functionArguments>
+        </function>
+    </functions>
+</latte>

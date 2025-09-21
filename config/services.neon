@@ -1,0 +1,29 @@
+services:
+	- App\Core\Router\RouterFactory::create()
+
+	- Bite\DI\Config( %rootDir%, %appDir%, %wwwDir%, %debugMode%, %isLocalServer%, %isProductionServer%, %templateFolder%, %publicFolder%, %canonizeBasePath% )
+
+	- Bite\Components\LinkLoader
+
+	- Bite\Components\BaseCanonizer( %publicFolder% )
+
+	- Bite\Components\Inspector\Inspector( %tools% )
+
+search:
+	application:
+		in: %appDir%
+		implements: Bite\DI\AsService
+
+	layout:
+		in: '%appDir%/Layout'
+		extends: Bite\Controls\ActiveControl
+
+	modules:
+		in: '%appDir%/Modules'
+		extends:
+			- Bite\Controls\ActiveControl
+			- Bite\Model\Abstract\Repository
+
+decorator:
+	Bite\DI\Injectable:
+		inject: true

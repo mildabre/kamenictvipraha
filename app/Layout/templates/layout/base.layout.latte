@@ -1,0 +1,64 @@
+{templateType App\Layout\Presenter\Types\BaseLayoutTemplate}
+<!DOCTYPE html>
+
+<html lang="cs">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	{block 'robots'}
+		<meta name="robots" content="index, follow">
+	{/block}
+
+	{link('/project/css/images/icons/favicon-32.png')}
+
+    {link('/project/css/images/icons/favicon-192.png')}
+
+	{read($baseTemplateDir.'/signika.font.html', true)}
+
+    {link('/project/css/base.layout.css')}
+
+    {block 'head'}{/block}
+
+    {$linkLoader->render()}
+
+	{block 'siteTitle'}{/block}
+
+	{block 'analytics'}{/block}
+
+</head>
+
+
+				{***************   body:  **************}
+
+
+<body class="body body-background">
+
+	<div class="site-container">
+
+		{block 'header'}{/block}
+
+		<div class="site-wrapper">
+
+			{block 'topMainMenu'}{/block}
+
+			<main class="main">
+
+				{block 'main'}{/block}
+
+			</main>
+
+			{block 'bottomMainMenu'}{/block}
+
+		</div>
+
+		{block 'footer'}{/block}
+
+	</div>
+
+</body>
+
+</html>
