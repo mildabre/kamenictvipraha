@@ -38,6 +38,6 @@ class ContentPresenter extends AbstractPresenter
         $this->template->setFile($file);
         $this->template->isProductionServer = $this->config->isProductionServer;
 
-        $this->setLayout(__DIR__.'/templates/layout/front.layout.latte');
+        $this->setLayout('front.layout.latte');
     }
 }
