@@ -3,9 +3,9 @@
 
 body { background-color: #f6f6f3; margin: 0;  background-position: center center;  background-repeat: repeat;  font-family: var(--base-font-family), sans-serif; font-size: var(--text-font-size); }
 
-.body-background {  background-image: url("images/body-warm.jpg");}
+.body-background {  background-image: url("images/layout/site-background.jpg");}
 
-.site-wrapper { max-width: 1050px; background-color: white; margin: 0 auto; padding-top: 1px; }
+.site-wrapper { max-width: 1050px; background-color: white; margin: 0 auto; padding-top: 1px; padding-bottom: 1px; }
 .main {  padding: 0 2.8%; margin-bottom: var(--text-margin); display: flow-root; }
 
 .aside { width: 38%; float: right; margin: 0 0 0 3.2%; }
