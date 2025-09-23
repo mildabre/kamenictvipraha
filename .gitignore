@@ -11,7 +11,7 @@
 /config/production.neon
 
 /www/bite/
-/www/photo/
+/www/site/photo/
 
 
 doc/
