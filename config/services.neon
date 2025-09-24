@@ -3,7 +3,7 @@ services:
 
 	- Bite\DI\Config( %rootDir%, %appDir%, %wwwDir%, %debugMode%, %isLocalServer%, %isProductionServer%, %templateFolder%, %publicFolder%, %canonizeBasePath% )
 
-	- Bite\Components\LinkLoader
+	- Bite\Components\AssetLinker
 
 	- Bite\Components\BaseCanonizer( %publicFolder% )
 
