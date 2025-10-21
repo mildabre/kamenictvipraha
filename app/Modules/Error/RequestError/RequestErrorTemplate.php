@@ -4,20 +4,16 @@ declare(strict_types=1);
 
 namespace App\Modules\Error\RequestError;
 
-use App\Layout\Presenter\Types\BaseLayoutTemplate;
-use Exception;
+use Bite\Template\LayoutTemplate;
 
-class RequestErrorTemplate extends BaseLayoutTemplate
+class RequestErrorTemplate extends LayoutTemplate
 {
-    public bool $forwarded;
-    public Exception $exception;
-    public int $code;
     public string $title;
     public string $message;
-    public bool $debugMode;
-    public bool $hasIdeLink;
-    public string $ideLinkCaption;
-    public string $ideLinkHref;
+    public string $classShortName;
+    public string $layoutFileName;
     public string $homeHref;
-    public string $presenterName;
+    public bool $printIdeLink;
+    public string $ideCaption;
+    public string $ideHref;
 }

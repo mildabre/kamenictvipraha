@@ -1,0 +1,79 @@
+{templateType App\Modules\Error\RequestError\RequestErrorTemplate}
+
+{var
+    $containerClass = match ($layoutFileName) {
+        'admin.layout.latte' => $debugMode ? 'error-container-admin-layout-debug' : 'error-container-admin-layout',
+        'front.layout.latte' => !$debugMode ? 'error-container-front-layout',
+        default => '',
+    }
+}
+
+
+{block 'title'}{$title}{/block}
+
+
+{block 'mainContent'}
+
+    <div class="error-container {$containerClass}">
+
+        {if $debugMode}
+            <div class="debug-message-panel">
+                <h3>{$classShortName}</h3>
+
+                {if $printIdeLink}
+                    <p><a href="editor:{$ideHref}" class="file-link">{$ideCaption}</a></p>
+                {/if}
+            </div>
+        {/if}
+
+        <div class="error-message-panel">
+            <h1 class="error-message-heading">{include 'title'}</h1>
+
+            <p class="error-message-text">{$message}</p>
+
+            <p>Pokračujte zde:</p>
+
+            <nav class="button-link-bar">
+                <a n:href="$homeHref" class="button-link next-button">Home</a>
+            </nav>
+        </div>
+
+    </div>
+
+{/block}
+
+
+{block 'robots'}
+    <meta name="robots" content="noindex, nofollow">
+{/block}
+
+
+{block 'head'}
+    {include parent}
+
+    <style>
+        .content-container { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .error-container { position:relative; margin: var(--box-margin) 0; }
+        .error-container-front-layout { margin-bottom: max(calc(50vh - 380px), var(--box-margin)); }
+        .error-container-admin-layout { margin-bottom: max(calc(45vh - 250px), var(--box-margin)); }
+        .error-container-admin-layout-debug  { margin-bottom: max(calc(55vh - 350px), var(--box-margin)); }
+
+        .debug-message-panel { margin-bottom: var(--box-margin); min-width: 460px; max-width: 580px; background-color: #FCE8E6; border: 1px solid #fc9c93; color: red;  border-radius: 5px; padding: 0 22px; }
+        .debug-message-panel a { color: red; padding: 1px 10px 3px;  border-radius: 4px; }
+        .debug-message-panel a:hover { background-color: #b4b8bb55; }
+
+        .error-message-panel { width: fit-content; min-width: 460px; border: 10px solid #c9cdd2;  border-radius: 6px; text-align: center; }
+        .error-message-heading { font-weight: bold; letter-spacing: -1px; margin-top: 0; background-color: #c9cdd2; padding: 0 45px 10px; font-size: 36px; }
+        .error-message-text { padding: 0 28px; }
+
+        h3 { font-weight: 600;  font-size: 21px;}
+        .button-link-bar { display: flex; flex-flow: row wrap; justify-content: center; margin: var(--box2-margin) 0; }
+
+        @media (max-width: 500px) {
+            .content-container { align-items: stretch; }
+            .debug-message-panel { display: none; }
+            .error-message-panel { min-width: auto; width: 100%; }
+        }
+    </style>
+
+{/block}
