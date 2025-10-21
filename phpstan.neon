@@ -1,0 +1,11 @@
+parameters:
+	level: 4
+
+	paths:
+		- app
+
+
+	universalObjectCratesClasses:
+		- Nette\Database\Table\ActiveRow
+		- Nette\Application\UI\Template
+
