@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace App\Layout\Presenter\Types;
 
-class FrontLayoutTemplate extends BaseLayoutTemplate
+use Bite\Template\LayoutTemplate;
+
+class FrontLayoutTemplate extends LayoutTemplate
 {
     public bool $isProductionServer;
 }
