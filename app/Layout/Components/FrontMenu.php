@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Layout\Components;
 
-use Bite\Components\UI\Menu\FrontModuleMenu;
+use Bite\Components\UI\Menu\ToggleMenu;
 
-final class FrontMenu extends FrontModuleMenu
+final class FrontMenu extends ToggleMenu
 {
     protected const array MenuItems = [
         '@home' => 'Úvod',
