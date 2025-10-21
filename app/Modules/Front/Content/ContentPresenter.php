@@ -8,7 +8,7 @@ use App\Layout\Components\FrontMenu;
 use App\Layout\Presenter\Types\FrontLayoutTemplate;
 use Bite\Exceptions\Request\ContentNotFoundException;
 use Bite\Presenter\AbstractPresenter;
-use Bite\Presenter\Traits\BaseCanonization;
+use Bite\Presenter\Traits\Base\BaseCanonization;
 use Nette\Application\Attributes\Parameter;
 
 /**
