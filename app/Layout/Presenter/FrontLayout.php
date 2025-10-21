@@ -6,6 +6,7 @@ namespace App\Layout\Presenter;
 
 use App\Layout\Presenter\Types\FrontLayoutTemplate;
 use Bite\Presenter\AbstractPresenter;
+use Bite\Presenter\Traits\Base\BaseCanonization;
 
 /**
  * @mixin AbstractPresenter
@@ -13,12 +14,11 @@ use Bite\Presenter\AbstractPresenter;
  */
 trait FrontLayout
 {
+    use BaseCanonization;
 
     final public function injectFrontLayout(): void
     {
         $this->setLayout('front.layout.latte');
-        $this->onRender[] = function() {
-            $this->template->isProductionServer = $this->config->isProductionServer;
-        };
+        $this->onRender[] = fn()  => $this->template->isProductionServer = $this->config->isProductionServer;
     }
 }
