@@ -29,29 +29,25 @@
 
 </head>
 
-<body class="body body-background">
+<body class="site-container">
 
-	<div class="site-container">
+    {block 'header'}{/block}
 
-		{block 'header'}{/block}
+    <main class="main-container">
 
-		<div class="site-wrapper">
+        {block 'topMainMenu'}{/block}
 
-			{block 'topMainMenu'}{/block}
+        <div class="content-container">
 
-			<main class="main">
+            {block 'mainContent'}{/block}
 
-				{block 'main'}{/block}
+        </div>
 
-			</main>
+        {block 'bottomMainMenu'}{/block}
 
-			{block 'bottomMainMenu'}{/block}
+    </main>
 
-		</div>
-
-		{block 'footer'}{/block}
-
-	</div>
+    {block 'footer'}{/block}
 
 </body>
 
