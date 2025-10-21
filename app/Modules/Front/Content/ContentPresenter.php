@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace App\Modules\Front\Content;
 
 use App\Layout\Components\FrontMenu;
+use App\Layout\Presenter\FrontLayout;
 use App\Layout\Presenter\Types\FrontLayoutTemplate;
 use Bite\Exceptions\Request\ContentNotFoundException;
 use Bite\Presenter\AbstractPresenter;
-use Bite\Presenter\Traits\Base\BaseCanonization;
 use Nette\Application\Attributes\Parameter;
 
 /**
@@ -16,7 +16,7 @@ use Nette\Application\Attributes\Parameter;
  */
 class ContentPresenter extends AbstractPresenter
 {
-    use BaseCanonization;
+    use FrontLayout;
 
     #[Parameter]
     public ?string $sid = null;
@@ -31,13 +31,11 @@ class ContentPresenter extends AbstractPresenter
 
         $key = $frontMenu->getCurrentKey();
         $file = __DIR__."/templates/pages/$key.latte";
-        if(!is_file($file)){
+
+        if (!is_file($file)) {
             throw new ContentNotFoundException();
         }
 
         $this->template->setFile($file);
-        $this->template->isProductionServer = $this->config->isProductionServer;
-
-        $this->setLayout('front.layout.latte');
     }
 }
