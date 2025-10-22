@@ -1,0 +1,95 @@
+{varType string $location }
+
+
+{if $location === 'side'}
+    <aside id="kontakt" data-target-kontakt-side class="aside-container side-column grid-view">
+
+        {include 'contact'}
+
+        {include 'addressPrague'}
+
+        {include 'addressMoravia'}
+
+    </aside>
+{/if}
+
+
+{if $location === 'top'}
+    <aside data-target-kontakt-top class="aside-container flow-view">
+
+        {include 'contact'}
+
+    </aside>
+{/if}
+
+
+{if $location === 'bottom'}
+    <aside data-target-kontakt-bottom class="aside-container">
+
+        {include 'contact'}
+
+        {include 'addressPrague'}
+
+        {include 'addressMoravia'}
+
+    </aside>
+{/if}
+
+
+{define 'contact'}
+    <div class='base-panel express-panel'>
+        <div>
+            <h2>Kontakt</h2>
+
+            <p class="text">
+                <a class="mail-link" href="mailto:tomas.cierny@seznam.cz">tomas.cierny@seznam.cz</a>
+            </p>
+            <p class="text">Dotazy vyřizuji telefonicky, nebo&nbsp;emailem</p>
+            <p class="text">Volejte&nbsp; Po&nbsp;-&nbsp;Pá 9:00&nbsp;až&nbsp;17:00</p>
+            <p class='label-button'>
+                <a class="label-button-link phone-link" href="tel:+420773025554">773 025 554</a>
+            </p>
+        </div>
+    </div>
+{/define}
+
+
+
+{define 'addressPrague'}
+    <div class="base-panel light-panel">
+        <div>
+            <h2>Praha</h2>
+
+            <p class="text centered-box">
+                Kouřimská 2336/10,<br>
+                Praha&nbsp;3&nbsp;-&nbsp;Vinohrady
+            </p>
+
+            <p class='label-button'>
+                <a class="label-button-link small-button-link" href="https://mapy.cz/s/6SJW" target="_blank">
+                    <span>www.mapy.cz</span>
+                </a>
+            </p>
+        </div>
+    </div>
+{/define}
+
+
+{define 'addressMoravia'}
+    <div class="base-panel light-panel">
+        <div>
+            <h2>Uherské Hradiště</h2>
+
+            <p class="text centered-box">
+                Blatnice pod Sv. Antonínkem 638
+            </p>
+
+            <p class='label-button'>
+                <a class="label-button-link small-button-link" href="https://mapy.cz/s/6SJW" target="_blank">
+                    <span>www.mapy.cz</span>
+                </a>
+            </p>
+        </div>
+    </div>
+{/define}
+
