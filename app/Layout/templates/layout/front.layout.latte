@@ -11,19 +11,6 @@
 {/block}
 
 
-{block 'robots'}
-
-	{if $isProductionServer}
-        <meta name="robots" content="index, follow">
-
-	{else}
-        <meta name="robots" content="noindex, nofollow">
-
-	{/if}
-
-{/block}
-
-
 {block 'analytics'}
 
 	{if $isProductionServer}
