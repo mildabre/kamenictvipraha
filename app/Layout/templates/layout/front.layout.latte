@@ -95,17 +95,19 @@
 {/block}
 
 
-{block 'main'}
+{block 'mainContent'}
+
+    {block 'side'}{/block}
 
 	<article class="article">
-
-        {include 'desktopAside'}
 
         <h1 class="heading">{include 'title'}</h1>
 
 		{include 'article'}
 
 	</article>
+
+    {block 'bottom'}{/block}
 
 {/block}
 
