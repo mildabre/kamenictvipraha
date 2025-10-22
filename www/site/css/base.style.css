@@ -1,5 +1,5 @@
 body {
-    --base-font-family: system-ui;
+    --font-family: system-ui;
     --lightgrey: #dfe1e1;
     --metalblack: #3a3d4d;
     --metalblack-x: #23252f;
@@ -46,15 +46,11 @@ body * { box-sizing: border-box;}
 table { border-collapse: collapse;}
 table td { vertical-align: top;}
 
-.slow-transition {transition: var(--slow-transition)}
-.medium-transition, a, .standard-button, .slim-button {transition: var(--medium-transition)}
-.fast-transition {transition: var(--fast-transition)}
+.medium-transition, a, .standard-button, .slim-button { transition: var(--medium-transition); }
+.fast-transition { transition: var(--fast-transition); }
 
-.nowrap { white-space: nowrap;}
+.nowrap { white-space: nowrap; }
 .text-center { text-align: center;}
-
-.small-button { text-decoration: none; background-color: #555E6787; padding: 2px 12px 4px;  border: none;  border-radius: 3px; color: white;}
-.small-button:hover { background-color: #41484F87;}
 
 .link-button-bar {  display: flex; margin: var(--box-box-margin) 0; }
 
