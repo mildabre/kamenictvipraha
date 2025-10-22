@@ -12,15 +12,10 @@
 
 
 {block 'analytics'}
-
-	{if $isProductionServer}
-		{read($baseTemplateDir.'/analytics.html', true)}
-	{/if}
-
+    {if $isProductionServer}
+        {read($baseTemplateDir.'/analytics.html', true)}
+    {/if}
 {/block}
-
-
-			{***************   body:  **************}
 
 
 {block 'header'}
@@ -73,13 +68,13 @@
 
     {block 'side'}{/block}
 
-	<article class="article">
+    <article class="article">
 
         <h1 class="heading">{include 'title'}</h1>
 
-		{include 'article'}
+        {include 'article'}
 
-	</article>
+    </article>
 
     {block 'bottom'}{/block}
 
