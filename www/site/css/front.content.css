@@ -22,36 +22,6 @@ h4 {  font-size: var(--text-font-size); margin: var(--text-margin) 0 7px;}
     .content-photo-wrapper { align-items: center; }
 }
 
-/* text */
-
-.section-heading { margin-top: var(--section-section-margin);}
-
-
-/* breakpoints */
-
-.mobile-view { display: none;}
-
-@media (max-width: 850px)
-{
-    .desktop-view { display: none;}
-    .mobile-view { display: block;} /* initial sometimes works not satisfiably */
-}
-
-.menu-mobile-view { display: flex;}
-.toggle-menu-button { display: none;}
-
-@media (max-width: 650px)
-{
-    .main-menu .button { padding-left: 28px;  padding-right: 28px; }
-    .menu-mobile-view { display: none;}
-    .toggle-menu-button { display: block;}
-}
-
-
-/* global overriding */
-
-.menu-opened { display: flex;}
-
 
 /* flex-flow boxes ;) */
 
