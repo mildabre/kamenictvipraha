@@ -9,9 +9,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	{block 'robots'}
-		<meta name="robots" content="index, follow">
-	{/block}
+    <meta n:block="'robots'" name="robots" content="{$isProductionServer ? 'index, follow' : 'noindex, nofollow'}">
 
 	{link('/site/css/images/favicons/favicon-32.png')}
 
