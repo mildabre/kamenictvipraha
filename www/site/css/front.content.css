@@ -1,3 +1,9 @@
+/* text */
+
+h1.heading, h2.heading, h1.section-heading, h2.section-heading { font-size: 26px; font-weight: 700; margin: var(--heading-margin) 0;}
+.section-heading { margin-top: var(--section-margin);}
+h3 { font-size: 22px; font-weight: 500;  margin: var(--text-margin) 0;}
+h4 {  font-size: var(--text-font-size); margin: var(--text-margin) 0 7px;}
 
 /* images */
 
@@ -52,16 +58,4 @@
 .photo-wrapper {  display: flow-root;  width: fit-content;  max-width: 800px; }
 .sample-photo { display: block; max-width: 100%;}
 .text-panel {  display: flow-root; max-width: 700px;  background-color: #f3f3f3; padding: 0 20px;  border-radius: 4px; }
-
-
-/*  development  */
-
-p.todo { display: flex; justify-content: center; align-items: center; margin-top: var(--box-margin);  margin-bottom: var(--box-margin); height: 240px; padding:28px 12px; text-align: center;  max-width: var(--box-max-width); background-color: #fde1e3; color: #a4a4a4; border: 1px dashed #a4a4a4;}
-p.todo:before { content: "Doplnit";  }
-p.todo:after { content: "....";  }
-
-@media (max-width: 610px)
-{
-    p.todo { max-width: none;}
-}
 
