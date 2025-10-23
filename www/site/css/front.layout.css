@@ -1,7 +1,7 @@
 
 /* layout containers */
 
-.site-container { background-color: #f6f6f3; background-image: url("images/layout/site-background-warm.png"); }
+.site-container { background-color: #f6f6f3; background-image: url("images/layout/body-warm.jpg"); }
 .main-container { max-width: 1050px; background-color: white; }
 .content-container { display: flow-root;  padding: 0 2.8% 1px; margin-bottom: var(--text-margin); }
 .header-banner, .footer-banner { flex: 0 0 auto; }
@@ -36,6 +36,8 @@ p.slim-text { max-width: var(--slim-text-max-width); }
 
 /* button link */
 
+.button-link-bar { display: flex; flex-flow: row wrap; justify-content: flex-start; margin: var(--box2-margin) 0; }
+
 .button-link-menu { display: flex; flex-flow: row wrap; justify-content: flex-start; gap: var(--menu-gap); }
 .button-link-bar { display: flex; flex-flow: row wrap; justify-content: flex-start; margin: var(--box2-margin) 0; }
 
@@ -44,5 +46,9 @@ p.slim-text { max-width: var(--slim-text-max-width); }
 .button-link.selected { background-color: var(--button-color-selected); }
 .button-link.selected:hover { background-color: var(--button-color-selected-hover); }
 
-.button-link-disabled, .button-link-disabled:hover { background-color: var(--button-color-disabled); color: #def; cursor: default; }
-
+.next-button { background-image: url("images/icons/common/next-white.png"); }
+.next-button-black { background-image: url("images/icons/common/next-black.png"); }
+.back-button, .back-icon { background-image: url("images/icons/common/back-white.png"); }
+.back-button-black { background-image: url("images/icons/common/back-black.png"); }
+.next-button, .next-button-black { padding-right: 38px; background-position: right center; }
+.back-button, .back-button-black { padding-left: 32px; background-position: left center; }
