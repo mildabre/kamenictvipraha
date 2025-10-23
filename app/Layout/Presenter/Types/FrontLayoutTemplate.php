@@ -9,4 +9,5 @@ use Bite\Template\LayoutTemplate;
 class FrontLayoutTemplate extends LayoutTemplate
 {
     public bool $isProductionServer;
+    public string $photoPath;
 }
