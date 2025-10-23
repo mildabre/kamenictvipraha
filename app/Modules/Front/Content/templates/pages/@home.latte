@@ -1,3 +1,4 @@
+{templateType App\Layout\Presenter\Types\FrontLayoutTemplate}
 
 {block 'title'}Sekání písma na náhrobky{/block}
 
@@ -43,17 +44,17 @@
 
     <div class="content-photo-wrapper photo-portrait-wrapper">
         <div class="sub-wrapper">
-            <img class="content-photo" src="{$basePath}/photo/pismo/pismo-41.jpg" alt="">
+            <img class="content-photo" src="{$photoPath}/pismo/pismo-41.jpg" alt="">
             <p>Ručně sekané písmo, zlacené</p>
         </div>
         <div class="sub-wrapper">
-            <img class="content-photo" src="{$basePath}/photo/pismo/pismo-65.jpg" alt="">
+            <img class="content-photo" src="{$photoPath}/pismo/pismo-65.jpg" alt="">
             <p>Ukázka sekaného písma</p>
         </div>
     </div>
 
-    <nav class="link-button-bar">
-        <a n:href="article, sid: 'pismo'" class="button button-link">Další ukázky písma</a>
+    <nav class="button-link-bar">
+        <a n:href="article, sid: 'pismo'" class="button-link next-button">Další ukázky písma</a>
     </nav>
 
 
@@ -64,17 +65,17 @@
 
     <div class="content-photo-wrapper photo-portrait-wrapper">
         <div class="sub-wrapper">
-            <img class="content-photo" src="{$basePath}/photo/gravirovani/gravirovani-42.jpg" alt="">
+            <img class="content-photo" src="{$photoPath}/gravirovani/gravirovani-42.jpg" alt="">
             <p>Gravírovaný portrét, černá žula</p>
         </div>
         <div class="sub-wrapper">
-            <img class="content-photo" src="{$basePath}/photo/homepage/gravirovani-01.jpg" alt="">
+            <img class="content-photo" src="{$photoPath}/homepage/gravirovani-01.jpg" alt="">
             <p>Ručně sekaná plastika stromu</p>
         </div>
     </div>
 
-    <nav class="link-button-bar">
-        <a n:href="article, sid: 'gravirovani'" class="button button-link">Další ukázky gravírování</a>
+    <nav class="button-link-bar">
+        <a n:href="article, sid: 'gravirovani'" class="button-link next-button">Další ukázky gravírování</a>
     </nav>
 
 
@@ -84,7 +85,7 @@
 
     <div class="content-photo-wrapper photo-landscape-wrapper">
         <div class="sub-wrapper">
-            <img class="content-photo" src="{$basePath}/photo/homepage/provozovna-01.jpg" alt="">
+            <img class="content-photo" src="{$photoPath}/homepage/provozovna-01.jpg" alt="">
             <p class="photo-caption">Provozovna Praha - Vinohrady, Olšanské hřbitovy</p>
         </div>
     </div>
