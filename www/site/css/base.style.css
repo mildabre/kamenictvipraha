@@ -39,7 +39,6 @@ body {
     --box-slight-indent: 0.4%;
     --list-item-margin: 5px;
     --menu-gap: 8px;
-    --slow-transition: background-color 0.25s ease-in-out;
     --medium-transition: background-color 0.18s ease-in-out;
     --fast-transition: background-color 0.05s ease-in-out;
 }
@@ -54,7 +53,6 @@ html { overflow-y: scroll; }
 table { border-collapse: collapse; }
 table td { vertical-align: top; }
 
-.slow-transition { transition: var(--slow-transition) }
 .medium-transition, a, .standard-button, .slim-button, input[type='submit'] { transition: var(--medium-transition) }
 .fast-transition { transition: var(--fast-transition) }
 
