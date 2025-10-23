@@ -113,3 +113,4 @@ tbody tr td { transition: var(--fast-transition);}
 .active-table tr[data-href]:hover td, .smart-table tbody tr:not(.heading):hover td { background-color: #f6f6f6; }
 .active-table td:hover .inline-text-label { background-color: #dddddd; }
 .active-table tbody tr[data-href] td { cursor: pointer; }
+
