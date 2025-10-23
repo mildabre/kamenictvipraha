@@ -6,9 +6,7 @@
 
         {include 'contact'}
 
-        {include 'addressPrague'}
-
-        {include 'addressMoravia'}
+        {include 'address'}
 
     </aside>
 {/if}
@@ -26,11 +24,11 @@
 {if $location === 'bottom'}
     <aside data-target-kontakt-bottom class="aside-container">
 
+        <h2 class="section-heading">Kontaktní údaje</h2>
+
         {include 'contact'}
 
-        {include 'addressPrague'}
-
-        {include 'addressMoravia'}
+        {include 'address'}
 
     </aside>
 {/if}
@@ -55,10 +53,10 @@
 
 
 
-{define 'addressPrague'}
+{define 'address'}
     <div class="base-panel light-panel">
         <div>
-            <h2>Praha</h2>
+            <h2>Adresa</h2>
 
             <p class="text centered-box">
                 Kouřimská 2336/10,<br>
