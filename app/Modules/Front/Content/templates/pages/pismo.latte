@@ -4,6 +4,11 @@
 {block 'title'}Sekání a obnova písma{/block}
 
 
+{block 'bottom'}
+    {include '../panels/aside.panels.latte', location: 'bottom'}
+{/block}
+
+
 {block 'article'}
 
     <p class="slim-text">Nabízím sekání ozdobných nápisů na kamenné desky, náhrobky, pomníky nebo pamětní desky. Na výběr mám paletu různých typů písma v různém stylu. Povrchovou úpravu nabízím ve třech provedeních - zlacené písmo, stříbřené písmo a barvené písmo (obvykle černá). Následují ukázky mojí práce.</p>
@@ -38,29 +43,11 @@
 
     <div class="content-photo-wrapper photo-landscape-wrapper">
         <div class="sub-wrapper">
-            <img class="content-photo" src="{$photoPath}/pismo/pismo-55.jpg" alt="">
-            <p class="photo-caption">Stříbrné písmo na pamětní desce</p>
-        </div>
-    </div>
-
-    <div class="content-photo-wrapper photo-landscape-wrapper">
-        <div class="sub-wrapper">
             <img class="content-photo" src="{$photoPath}/pismo/pismo-79.jpg" alt="">
             <p class="photo-caption">Pamětní deska na Novém židovském hřbitově</p>
         </div>
     </div>
 
-
-    <div class="content-photo-wrapper photo-portrait-wrapper">
-        <div class="sub-wrapper">
-            <img class="content-photo" src="{$photoPath}/pismo/pismo-25.jpg" alt="">
-            <p>Zlacené písmo, Olšanské hřbitovy</p>
-        </div>
-        <div class="sub-wrapper">
-            <img class="content-photo" src="{$photoPath}/pismo/pismo-26.jpg" alt="">
-            <p>Zlacené písmo</p>
-        </div>
-    </div>
 
 {/block}
 
