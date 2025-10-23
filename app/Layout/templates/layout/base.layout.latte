@@ -19,11 +19,25 @@
 
 	{read($baseTemplateDir.'/signika.font.html', true)}
 
-    {link('/site/css/base.layout.css')}
+    {link('/site/css/base.style.css')}
+
+    {link('/site/css/front.layout.css')}
+
+    {link('/site/css/front.panels.css')}
+
+    {link('/site/css/front.toggle-menu.css')}
+
+    {link('/site/css/front.header.css')}
+
+    {link('/site/css/front.content.css')}
 
     {block 'head'}{/block}
 
-	{block 'siteTitle'}{/block}
+    {link('/site/js/ToggleMenu.js')}
+
+    {link('/site/js/ScrollTarget.js')}
+
+    {block 'siteTitle'}{/block}
 
 	{block 'analytics'}{/block}
 
