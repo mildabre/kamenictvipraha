@@ -37,5 +37,6 @@ class ContentPresenter extends AbstractPresenter
         }
 
         $this->template->setFile($file);
+        $this->template->photoPath = $this->config->basePath.'/site/photo';
     }
 }
