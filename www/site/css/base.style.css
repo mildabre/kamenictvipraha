@@ -21,8 +21,7 @@ body {
     --sandyblack: #1b1c15;
 
     --box-margin: 26px;
-    --box2-margin: 36px;
-    --box-box-margin: 34px;
+    --box-large-margin: 36px;
     --section-margin: 46px;
     --panel-max-width: 620px;
 
@@ -67,9 +66,9 @@ table td { vertical-align: top; }
 
 /* containers */
 
-.box-container { position:relative; max-width: 100%; margin-top: var(--box-margin); margin-bottom: var(--box2-margin); }
+.box-container { position:relative; max-width: 100%; margin-top: var(--box-margin); margin-bottom: var(--box-large-margin); }
 .fit-container { width: fit-content; }
-.center-container { width: fit-content; margin: var(--box-margin) auto  var(--box2-margin); }
+.center-container { width: fit-content; margin: var(--box-margin) auto  var(--box-large-margin); }
 .text-container { max-width: 880px; margin: var(--box-margin) 0; }
 
 /* text */
