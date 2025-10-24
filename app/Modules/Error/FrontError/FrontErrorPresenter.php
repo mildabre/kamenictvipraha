@@ -8,12 +8,10 @@ use App\Layout\Presenter\FrontLayout;
 use App\Modules\Error\RequestError\RequestErrorTrait;
 use Bite\Attributes\Error;
 use Bite\Presenter\AbstractPresenter;
-use Bite\Presenter\Traits\Base\BaseCanonization;
 
 #[Error]
 final class FrontErrorPresenter extends AbstractPresenter
 {
-    use BaseCanonization;
     use FrontLayout;
     use RequestErrorTrait;
 }
