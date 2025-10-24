@@ -10,7 +10,9 @@ final class FrontMenu extends ToggleMenu
 {
     protected const array MenuItems = [
         '@home' => 'Úvod',
-        'sochy' => 'Sochy a kamenné prvky',
+//        'sochy' => 'Sochy a kamenné prvky',
+        'hokok' => 'Hokok',
+        'sochy' => 'Sochy',
         'nahrobky' => 'Kamenné náhrobky',
         'sekani-pisma' => 'Sekání písma',
         'gravirovani' => 'Gravírování motivů',
