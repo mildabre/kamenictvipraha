@@ -20,9 +20,13 @@ body {
     --sandygrey-hover: #a2a08c;
     --sandyblack: #1b1c15;
 
-    --box-margin: 26px;
-    --box-large-margin: 36px;
-    --section-margin: 46px;
+    --portrait-margin: 6.0%;
+    --box-margin: 28px;
+    --box-large-margin: 38px;
+    --box-x-large-margin: 44px;
+    --section-margin: 48px;
+    --content-margin: 2.8%;
+    --content-margin-mobile: 1.8%;
     --panel-max-width: 620px;
 
     --box-max-width: 620px;
@@ -31,6 +35,7 @@ body {
     --text-line-height: 24px;
     --heading-margin: 24px;
     --text-margin: 16px;
+    --text-small-margin: 12px;
     --text-margin-mobile: 12px;
     --text-max-width: 750px;
     --slim-text-max-width: 580px;
