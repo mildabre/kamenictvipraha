@@ -8,32 +8,26 @@ use Bite\DI\Config;
 use Bite\Exceptions\Request\ContentNotFoundException;
 use Bite\Exceptions\Request\FeatureDisabledException;
 use Bite\Security\Exceptions\AccessDeniedException;
-use Bite\Support\Tools;
 use Nette\Application\IPresenter;
 use Nette\Application\Request;
 use Nette\Application\Response;
 use Nette\Application\Responses;
-use Nette\Http;
 
 final class RequestErrorPresenter implements IPresenter
 {
     use DebugPanelData;
 
-    private const string FrontModule = 'Front';
-    private const string ErrorModule = 'Error';
-    private const string HomeAction = 'Home:home';
-    private const string ErrorPresenterSuffix = 'Error';
+    private const string HomeLink = ':Front:Content:article';
+    private const string ErrorPresenter = 'Error:FrontError';
 
     public function __construct(private readonly Config $config)
     {}
 
     public function run(Request $request): Response
     {
-        $currentModule = self::FrontModule;
-
         $exception = $request->getParameter('exception');
         $errorType = $exception->getCode() === 403 ? 'ForbiddenType' : 'NotFoundType';
-        $title = $message = $homeHref = '';
+        $title = $message = '';
 
         if ($errorType === 'NotFoundType') {
             [$title, $message] = match ($exception::class) {
@@ -41,7 +35,6 @@ final class RequestErrorPresenter implements IPresenter
                 FeatureDisabledException::class => ['Disabled', 'Funkce je zablokovaná'],
                 default => ['Not Found', 'Stránka nebyla nalezena'],
             };
-            $homeHref = ':' . $currentModule . ':' . self::HomeAction;
         }
 
         if ($errorType === 'ForbiddenType') {
@@ -49,7 +42,6 @@ final class RequestErrorPresenter implements IPresenter
                 AccessDeniedException::class => ['Access Denied', 'Přístup zamítnut'],
                 default => ['Forbidden', 'Přístup zamítnut'],
             };
-            $homeHref = ':' . self::FrontModule . ':' . self::HomeAction;
         }
 
         [$printIdeLink, $ideHref, $ideCaption, $classShortName] = $this->getDebugPanelData($request);
@@ -62,13 +54,11 @@ final class RequestErrorPresenter implements IPresenter
             'printIdeLink' => $printIdeLink,
             'ideCaption' => $ideCaption,
             'ideHref' => $ideHref,
-            'homeHref' => $homeHref,
+            'homeHref' => self::HomeLink,
         ];
 
-        $errorPresenterName = self::ErrorModule.':'.$currentModule.self::ErrorPresenterSuffix;
-
         $request->setParameters($parameters);
-        $request->setPresenterName($errorPresenterName);
+        $request->setPresenterName(self::ErrorPresenter);
 
         return new Responses\ForwardResponse($request);
     }
