@@ -34,7 +34,7 @@
     .toggle-menu a { max-width: max-content; }
 }
 
-@media (max-width: 590px)
+@media (max-width: 520px)
 {
     .toggle-menu-body { flex-flow: column nowrap; align-items: stretch; gap: 1px; }
     .toggle-menu-body a { max-width: none; }
