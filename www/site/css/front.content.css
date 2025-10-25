@@ -1,10 +1,15 @@
 /* text */
 
-h1.heading, h2.heading, .section-heading, .section-heading { font-size: 26px; margin: var(--heading-margin) 0; }
+h1.heading, h2.heading, .section-heading { font-size: 28px; margin: var(--heading-margin) 0; }
 .section-heading { margin-top: var(--section-margin); }
-h3, h4 { font-size: var(--text-font-size); margin: var(--text-margin) 0; }
-h4 {  margin-bottom: 7px; }
-p.slim-text { max-width: var(--slim-text-max-width); }
+h3 { font-size: var(--h3-font-size);  line-height: var(--h3-line-height);  margin: var(--text-margin) 0; }
+h4 { font-size: var(--text-font-size); line-height: var(--text-line-height);  margin: var(--text-margin) 0 2px; }
+h4 + p { margin-top: 2px; }
+
+.text-wide { max-width: var(--text-wide-width);  background-color: #e8e2a2; }
+.text-standard { max-width: var(--text-standard-width);  background-color: #dcddda; }
+.text-compact { max-width: var(--text-compact-width);  background-color: #d1e8a2; }
+.text-narrow { max-width: var(--text-narrow-width);  background-color: #dacde4; }
 
 
 /* images */
