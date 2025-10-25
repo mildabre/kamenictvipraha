@@ -39,8 +39,6 @@ h4 + p { margin-top: 2px; }
 }
 
 
-/* flex-flow boxes ;) */
+/* elements */
 
-.text-panel { display: flow-root; max-width: 700px; background-color: #f3f3f3; padding: 0 20px; border-radius: 4px; }
-
-
+.text-panel { display: flow-root; background-color: #f3f3f3; padding: 0 20px;  border-radius: 4px; margin: var(--box-margin) 0; }
