@@ -6,10 +6,10 @@ h3 { font-size: var(--h3-font-size);  line-height: var(--h3-line-height);  margi
 h4 { font-size: var(--text-font-size); line-height: var(--text-line-height);  margin: var(--text-margin) 0 2px; }
 h4 + p { margin-top: 2px; }
 
-.text-wide { max-width: var(--text-wide-width);  background-color: #e8e2a2; }
-.text-standard { max-width: var(--text-standard-width);  background-color: #dcddda; }
-.text-compact { max-width: var(--text-compact-width);  background-color: #d1e8a2; }
-.text-narrow { max-width: var(--text-narrow-width);  background-color: #dacde4; }
+.text-wide { max-width: var(--text-wide-width); }
+.text-standard { max-width: var(--text-standard-width); }
+.text-compact { max-width: var(--text-compact-width); }
+.text-narrow { max-width: var(--text-narrow-width); }
 
 
 /* images */
@@ -17,7 +17,7 @@ h4 + p { margin-top: 2px; }
 .content-photo-container { display: flex; gap: var(--section-margin); margin: var(--box-margin) 2px var(--section-margin) 2px; }
 .content-flow-wrap { flex-wrap: wrap; }
 .content-photo-container + .content-photo-container { margin-top: var(--section-margin); }
-.content-photo-wrapper { background-color: #fbfbc2;}
+.content-photo-wrapper { }
 .content-photo { display: block; max-width: 100%; }
 .content-photo-caption { margin: var(--text-small-margin) 0 0 2px;}
 
