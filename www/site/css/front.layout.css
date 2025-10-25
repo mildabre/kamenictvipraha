@@ -13,7 +13,10 @@
 .flow-view { display: none; }
 .grid-view { display: block; }
 
-@media (max-width: 890px)
+
+/* side breakpoint */
+
+@media (max-width: 920px)
 {
     .grid-view { display: none; }
     .flow-view { display: block; }
