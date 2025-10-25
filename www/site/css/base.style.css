@@ -20,26 +20,31 @@ body {
     --sandygrey-hover: #a2a08c;
     --sandyblack: #1b1c15;
 
-    --portrait-margin: 6.0%;
     --box-margin: 28px;
     --box-large-margin: 38px;
     --box-x-large-margin: 44px;
+
     --section-margin: 48px;
     --content-margin: 2.8%;
     --content-margin-mobile: 1.8%;
+    --portrait-margin: 6.0%;
     --panel-max-width: 620px;
 
-    --box-max-width: 620px;
     --text-font-size: 16px;
-    --h3-font-size: 18px;
     --text-line-height: 24px;
-    --heading-margin: 24px;
     --text-margin: 16px;
     --text-small-margin: 12px;
     --text-margin-mobile: 12px;
-    --text-max-width: 750px;
-    --slim-text-max-width: 580px;
-    --text-col2-max-width: 840px;
+
+    --h3-font-size: 18px;
+    --h3-line-height: 26px;
+    --heading-margin: 24px;
+
+    --text-wide-width: 80ch;
+    --text-standard-width: 68ch;
+    --text-compact-width: 56ch;
+    --text-narrow-width: 44ch;
+
     --box-slight-indent: 0.4%;
     --list-item-margin: 5px;
     --menu-gap: 8px;
@@ -96,11 +101,6 @@ p, ul { margin-top: var(--text-margin); margin-bottom: var(--text-margin); }
 body { font-family: var(--font-family), sans-serif; font-size: var(--text-font-size); }
 
 
-/* panel */
-
-.text-panel { display: flow-root; max-width: 700px;  background-color: #f3f3f3; padding: 0 20px;  border-radius: 4px; margin: var(--box-margin) 0; }
-
-
 /* table */
 
 .table, .base-table { margin: var(--text-margin) 0; }
@@ -121,4 +121,4 @@ tbody tr td { transition: var(--fast-transition);}
 
 /* dev */
 
-p.todo { display: flex; justify-content: center; align-items: center; margin: var(--box-margin) 0; min-height: 140px; max-width: var(--text-max-width); padding:28px 12px; text-align: center; background-color: #fff3ef; border: 1px dashed #cdb5b5;}
+p.todo { display: flex; justify-content: center; align-items: center; margin: var(--box-margin) 0; min-height: 140px; max-width: var(--text-wide-width); padding:28px 12px; text-align: center; background-color: #fff3ef; border: 1px dashed #cdb5b5;}
