@@ -3,7 +3,7 @@
 
 .site-container { background-color: #f6f6f3; background-image: url("images/layout/body-warm.jpg"); }
 .main-container { max-width: 1050px; background-color: white; }
-.content-container { display: flow-root;  padding: 0 2.8% 1px; margin-bottom: var(--text-margin); }
+.content-container { display: flow-root; margin: 0 var(--content-margin); }
 .header-banner, .footer-banner { flex: 0 0 auto; }
 
 /* aside */
@@ -31,7 +31,7 @@ p.slim-text { max-width: var(--slim-text-max-width); }
 @media (max-width: 520px)
 {
     .article-container h1, .article-container h2 { margin-left: 2px; }
-    .content-container { padding: 0 1.8%; }
+    .content-container { margin: 0 var(--content-margin-mobile); }
 }
 
 /* button link */
