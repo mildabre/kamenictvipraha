@@ -40,7 +40,7 @@
 .button-link-menu { display: flex; flex-flow: row wrap; justify-content: flex-start; gap: var(--menu-gap); }
 .button-link-bar { display: flex; flex-flow: row wrap; justify-content: flex-start; margin: var(--box-large-margin) 0; }
 
-@media(max-width: 560px) {
+@media (max-width: 560px) {
     .button-link-bar { justify-content: center; }
 }
 
