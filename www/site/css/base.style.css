@@ -40,10 +40,10 @@ body {
     --h3-line-height: 26px;
     --heading-margin: 24px;
 
-    --text-wide-width: 80ch;
-    --text-standard-width: 68ch;
-    --text-compact-width: 56ch;
-    --text-narrow-width: 44ch;
+    --text-wide-width: 88ch;
+    --text-standard-width: 74ch;
+    --text-compact-width: 60ch;
+    --text-narrow-width: 46ch;
 
     --box-slight-indent: 0.4%;
     --list-item-margin: 5px;
