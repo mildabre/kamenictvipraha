@@ -1,0 +1,46 @@
+{templateType App\Layout\Presenter\Types\FrontLayoutTemplate}
+
+
+{block 'title'}Sochy a kamenické prvky{/block}
+
+
+{block 'bottom'}
+    {include '../panels/aside.panels.latte', location: 'bottom'}
+{/block}
+
+
+{block 'article'}
+
+    <div class="text-compact">
+        <p>Provádím odbornou renovaci a restauraci kamenných soch, skulptur, křížů a sakrálních dekorací,
+            včetně detailních prvků jako jsou reliéfy, nápisy či ornamenty. Každý kus prochází pečlivým
+            čištěním, opravou poškozených částí a konzervací povrchu tak, aby si zachoval svou estetickou i duchovní hodnotu.</p>
+
+        <p>Práce provádím s důrazem na řemeslnou přesnost a historickou věrnost. Specializuji se na pískovec, žulu a mramor.
+            Renovace probíhá s respektem k původnímu stylu a technice, v úzké spolupráci s majitelem nebo
+            památkáři.</p>
+    </div>
+
+    <div class="image-container portrait-image">
+        <img src="{$imagePath}/drafts/draft.450-600.png" alt="">
+        <img src="{$imagePath}/drafts/draft.450-600.png" alt="">
+    </div>
+
+    <div class="image-container">
+        <img src="{$imagePath}/pismo/pismo-15.jpg" alt="">
+    </div>
+
+    <div class="image-container">
+        <img src="{$imagePath}/pismo/pismo-75.jpg" alt="">
+    </div>
+
+    <div class="image-container">
+        <img src="{$imagePath}/pismo/pismo-57.jpg" alt="">
+    </div>
+
+    <div class="image-container">
+        <img src="{$imagePath}/pismo/pismo-79.jpg" alt="">
+    </div>
+
+
+{/block}
