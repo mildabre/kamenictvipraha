@@ -26,8 +26,6 @@
 /* article */
 
 .article-container {}
-.medium-article { }
-
 
 @media (max-width: 520px)
 {
@@ -38,7 +36,7 @@
 /* button link */
 
 .button-link-menu { display: flex; flex-flow: row wrap; justify-content: flex-start; gap: var(--menu-gap); }
-.button-link-bar { display: flex; flex-flow: row wrap; justify-content: flex-start; margin: var(--box-large-margin) 0; }
+.button-link-bar { display: flex; flex-flow: row wrap; justify-content: flex-start; margin: var(--box-margin-large) 0; }
 
 @media (max-width: 560px) {
     .button-link-bar { justify-content: center; }
