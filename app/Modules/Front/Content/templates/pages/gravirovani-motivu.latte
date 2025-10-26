@@ -1,0 +1,38 @@
+{templateType App\Layout\Presenter\Types\FrontLayoutTemplate}
+
+
+{block 'title'}Gravírování portrétů a motivů{/block}
+
+
+{block 'bottom'}
+    {include '../panels/aside.panels.latte', location: 'bottom'}
+{/block}
+
+
+{block 'article'}
+
+    <p class="text-compact">Gravírování portrétů nebo motivů se používá pro umělecké ztvárnění kamenného náhrobku. Pro
+        gravírování se používají speciální technologické postupy a nástroje. Aby byl výsledek gravírování kvalitní je
+        potřeba značných zkušeností s gravírovací technikou. Prohlédněte si ukázky mých prací - gravírovaných portrétů a
+        motivů.</p>
+
+    <div class="image-container portrait-image">
+        <img src="{$imagePath}/homepage/gravirovani-63.jpg" alt="">
+        <img src="{$imagePath}/gravirovani/gravirovani-60.jpg" alt="">
+    </div>
+
+    <div class="image-container portrait-image">
+        <img src="{$imagePath}/gravirovani/gravirovani-86.jpg" alt="">
+        <img src="{$imagePath}/gravirovani/gravirovani-73.jpg" alt="">
+    </div>
+
+    <div class="image-container portrait-image">
+        <img src="{$imagePath}/gravirovani/gravirovani-78.jpg" alt="">
+        <img src="{$imagePath}/gravirovani/gravirovani-76.jpg" alt="">
+    </div>
+
+    <div class="image-container">
+        <img src="{$imagePath}/gravirovani/gravirovani-53.jpg" alt="">
+    </div>
+
+{/block}
