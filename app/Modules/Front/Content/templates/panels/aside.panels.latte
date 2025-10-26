@@ -1,8 +1,7 @@
 {varType string $location }
 
-
 {if $location === 'side'}
-    <aside id="kontakt" data-target-kontakt-side class="aside-container side-column grid-view">
+    <aside id="kontakt" data-target-kontakt-side class="side-column column-grid-view">
 
         {include 'contact'}
 
@@ -11,18 +10,16 @@
     </aside>
 {/if}
 
-
 {if $location === 'top'}
-    <aside data-target-kontakt-top class="aside-container flow-view">
+    <aside data-target-kontakt-top class="column-flow-view">
 
         {include 'contact'}
 
     </aside>
 {/if}
 
-
 {if $location === 'bottom'}
-    <aside data-target-kontakt-bottom class="aside-container">
+    <aside data-target-kontakt-bottom>
 
         <h2 class="section-heading">Kontaktní údaje</h2>
 
@@ -32,7 +29,6 @@
 
     </aside>
 {/if}
-
 
 {define 'contact'}
     <div class='base-panel express-panel'>
@@ -50,8 +46,6 @@
         </div>
     </div>
 {/define}
-
-
 
 {define 'address'}
     <div class="base-panel light-panel">
@@ -72,7 +66,6 @@
     </div>
 {/define}
 
-
 {define 'addressMoravia'}
     <div class="base-panel light-panel">
         <div>
@@ -90,4 +83,3 @@
         </div>
     </div>
 {/define}
-
