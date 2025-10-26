@@ -21,31 +21,31 @@ body {
     --sandyblack: #1b1c15;
 
     --box-margin: 28px;
-    --box-large-margin: 38px;
-    --box-x-large-margin: 44px;
+    --box-margin-large: 38px;
+    --box-margin-x-large: 44px;
 
     --section-margin: 48px;
     --content-margin: 2.8%;
     --content-margin-mobile: 1.8%;
     --portrait-margin: 6.0%;
-    --panel-max-width: 620px;
+    --panel-width: 620px;
+    --panel-margin-horizontal-mobile: 0.7%;
 
     --text-font-size: 16px;
     --text-line-height: 24px;
     --text-margin: 16px;
-    --text-small-margin: 12px;
+    --text-margin-small: 12px;
     --text-margin-mobile: 12px;
 
     --h3-font-size: 18px;
     --h3-line-height: 26px;
     --heading-margin: 24px;
 
-    --text-wide-width: 88ch;
-    --text-standard-width: 74ch;
+    --text-wide-width: 86ch;
+    --text-standard-width: 70ch;
     --text-compact-width: 60ch;
     --text-narrow-width: 46ch;
 
-    --box-slight-indent: 0.4%;
     --list-item-margin: 5px;
     --menu-gap: 8px;
     --medium-transition: background-color 0.18s ease-in-out;
@@ -76,9 +76,9 @@ table td { vertical-align: top; }
 
 /* containers */
 
-.box-container { position:relative; max-width: 100%; margin-top: var(--box-margin); margin-bottom: var(--box-large-margin); }
+.box-container { position:relative; max-width: 100%; margin-top: var(--box-margin); margin-bottom: var(--box-margin-large); }
 .fit-container { width: fit-content; }
-.center-container { width: fit-content; margin: var(--box-margin) auto  var(--box-large-margin); }
+.center-container { width: fit-content; margin: var(--box-margin) auto  var(--box-margin-large); }
 .text-container { max-width: 880px; margin: var(--box-margin) 0; }
 
 /* text */
@@ -121,4 +121,4 @@ tbody tr td { transition: var(--fast-transition);}
 
 /* dev */
 
-p.todo { display: flex; justify-content: center; align-items: center; margin: var(--box-margin) 0; min-height: 140px; max-width: var(--text-wide-width); padding:28px 12px; text-align: center; background-color: #fff3ef; border: 1px dashed #cdb5b5;}
+p.todo { display: flex; justify-content: center; align-items: center; margin: var(--box-margin) 0; min-height: 140px; max-width: 80ch; padding:28px 12px; text-align: center; background-color: #fff3ef; border: 1px dashed #cdb5b5;}
