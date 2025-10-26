@@ -8,18 +8,17 @@
 
 /* aside */
 
-.aside-container { }
 .side-column { width: 38%; float: right; margin: 0 0 0 3.2%; }
-.flow-view { display: none; }
-.grid-view { display: block; }
+.column-flow-view { display: none; }
+.column-grid-view { display: block; }
 
 
 /* side breakpoint */
 
 @media (max-width: 920px)
 {
-    .grid-view { display: none; }
-    .flow-view { display: block; }
+    .column-grid-view { display: none; }
+    .column-flow-view { display: block; }
 }
 
 
