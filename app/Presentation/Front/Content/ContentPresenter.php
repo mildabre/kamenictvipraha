@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Front\Content;
+namespace App\Presentation\Front\Content;
 
 use App\Layout\Components\FrontMenu;
 use App\Layout\Presenter\FrontLayout;
