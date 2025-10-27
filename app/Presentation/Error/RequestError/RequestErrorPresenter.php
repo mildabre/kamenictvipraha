@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Error\RequestError;
+namespace App\Presentation\Error\RequestError;
 
 use Bite\DI\Config;
 use Bite\Exceptions\Request\ContentNotFoundException;

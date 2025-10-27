@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Error\RequestError;
+namespace App\Presentation\Error\RequestError;
 
 use App\Layout\Presenter\BasePresenter;
 use Bite\Attributes\Action;

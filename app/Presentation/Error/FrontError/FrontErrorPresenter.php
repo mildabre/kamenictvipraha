@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Error\FrontError;
+namespace App\Presentation\Error\FrontError;
 
 use App\Layout\Presenter\FrontLayout;
-use App\Modules\Error\RequestError\RequestErrorTrait;
+use App\Presentation\Error\RequestError\RequestErrorTrait;
 use Bite\Attributes\Error;
 use Bite\Presenter\AbstractPresenter;
 

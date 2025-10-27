@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Error\ServerError;
+namespace App\Presentation\Error\ServerError;
 
-use App\Modules\Error\RequestError\DebugPanelData;
+use App\Presentation\Error\RequestError\DebugPanelData;
 use Bite\DI\Config;
 use Nette\Application\IPresenter;
 use Nette\Application\Request;

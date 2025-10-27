@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Error\RequestError;
+namespace App\Presentation\Error\RequestError;
 
-use App\Modules\Error\ServerError\ServerErrorPresenter;
+use App\Presentation\Error\ServerError\ServerErrorPresenter;
 use Bite\Presenter\AbstractPresenter;
 use Bite\Support\Tools;
 use Nette\Application\Request;
