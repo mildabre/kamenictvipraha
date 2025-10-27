@@ -14,7 +14,7 @@
 
 .header-logo { width: 89px; height: 125px; background-image: url("images/layout/logo.125.png"); background-repeat: no-repeat;  background-position: center center; }
 .header-text { display: flex; flex-direction: column; row-gap: 16px;  text-decoration: none;  color: #1b1c15; }
-.header-text-item { font-size: 48px; line-height: 48px; font-family: "Signika", serif; white-space: nowrap; font-weight: 600; word-spacing: 9px; display: block; color: #2a231c;}
+.header-text-item { font-size: 48px; line-height: 48px; font-family: "Signika", serif; white-space: nowrap; font-weight: 600; word-spacing: 9px; display: block; color: #2a231c; }
 .header-subtitle { display: flex; flex-direction: column; align-items: center; gap:12px; }
 .header-subitem { width: fit-content; font-family: 'Signika', system-ui, sans-serif; font-size: 22px; line-height: 22px; color: black; word-spacing: 3px; }
 
@@ -116,14 +116,14 @@
 .footer-text-container { display: flex; flex-flow: row nowrap; width: fit-content; padding: 0; }
 
 .footer-text { white-space: nowrap;  display: flex; flex-flow: row nowrap; padding: 0 10px 3px; }
-.footer-text-separator { margin: 0;}
+.footer-text-separator { margin: 0; }
 
 .footer-link-container { margin-left: auto; width: fit-content; display: flex; flex-flow: row nowrap; column-gap: 6px; }
 .footer-link { color: black; padding: 0 10px 3px;  border-radius: 18px; white-space: nowrap; }
-.footer-link:hover { background-color: #fff6;}
+.footer-link:hover { background-color: #fff6; }
 
 @media (max-width: 980px) {
-    .footer-container { justify-content: center;}
+    .footer-container { justify-content: center; }
     .footer-link-container { margin-left: 0;  }
 }
 
@@ -131,5 +131,5 @@
     .footer-container, .footer-text-container, .footer-link-container  { flex-direction: column; row-gap: 12px; align-items: center; }
     .footer-container { padding: 24px 6px; }
     .footer-text-container, .footer-link-container { row-gap: 4px;  }
-    .footer-text-separator {  display: none;}
+    .footer-text-separator {  display: none; }
 }
