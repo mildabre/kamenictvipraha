@@ -19,7 +19,7 @@ search:
 		extends: Bite\Controls\ActiveControl
 
 	modules:
-		in: '%appDir%/Modules'
+		in: '%appDir%/Presentation'
 		extends:
 			- Bite\Controls\ActiveControl
 			- Bite\Model\Abstract\Repository
