@@ -86,7 +86,7 @@ table td { vertical-align: top; }
 ul li { margin-bottom: var(--list-item-margin); }
 ul li:last-child { margin-bottom: 0; }
 ul.dot, ul.not-dot { padding-left:0; margin-left: 3px; }
-ul.dot li { list-style-type:none; padding-left:18px; background:url(images/icons/dot-black.png) no-repeat left -1px; }
+ul.dot li { list-style-type:none; padding-left:18px; background:url(images/icons/content/dot-black.png) no-repeat left -1px; }
 ul li.list-sub-item { margin-left: 28px;}
 ul.not-dot li { list-style-type:none; }
 

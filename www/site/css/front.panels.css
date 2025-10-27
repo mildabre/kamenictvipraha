@@ -19,7 +19,7 @@
 .express-panel .text strong { font-weight: normal; color: var(--sandyellow); }
 .express-panel .mail-link { color: var(--sandyellow-strong); padding: 3px 14px 4px;  border-radius: 16px; }
 .express-panel .mail-link:hover {  background-color: #fff3; }
-.express-panel .label-button-link { padding-left: 47px; background-color: var(--sandyellow); color: black;  background-image: url("images/icons/phone-black-28.png"); }
+.express-panel .label-button-link { padding-left: 47px; background-color: var(--sandyellow); color: black;  background-image: url("images/icons/content/phone-black-28.png"); }
 
 .light-panel { background-color: var(--lightgrey); }
 .light-panel h2 { color: var(--metalblack-x); }
