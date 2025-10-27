@@ -17,7 +17,7 @@
 .toggle-menu-toggler-collapse .collapse-caption { display: initial; }
 .toggle-menu-toggler-collapse .expand-caption { display: none; }
 
-.toggler-icon { width: 22px; height: 22px; position:absolute; right: 16px; top: 10px; background-position: center top 0;  background-repeat: no-repeat;  background-image: url("images/icons/menu/rolldown-toggle-menu.png"); }
+.toggler-icon { width: 22px; height: 22px; position:absolute; right: 16px; top: 10px; background-position: center top 0;  background-repeat: no-repeat;  background-image: url("images/icons/menu/menu-toggler-white.png"); }
 .toggle-menu-toggler-collapse .toggler-icon { background-position-y: -50px; }
 
 .toggle-menu-toggler { display: none; }                              /* set desktop view */
