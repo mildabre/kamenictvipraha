@@ -10,7 +10,7 @@
 
 /* toggle button */
 
-.toggle-menu-toggler {  position:relative; padding: 10px 12px 12px; cursor: pointer; }
+.toggle-menu-toggler { position:relative; padding: 10px 12px 12px; cursor: pointer; }
 .toggle-menu-toggler:hover { background-color: var(--button-color); }
 
 .collapse-caption { display: none;}
