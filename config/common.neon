@@ -3,7 +3,7 @@ application:
 		4xx: Error:RequestError
 		5xx: Error:ServerError
 
-	mapping: 'App\Modules\*\**Presenter'
+	mapping: 'App\Presentation\*\**Presenter'
 
 	catchExceptions: true
 
