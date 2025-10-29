@@ -1,10 +1,10 @@
 /* text */
 
-h1.heading, h2.heading, .section-heading { font-size: 28px; margin: var(--heading-margin) 0; }
+h1.heading, h2.heading, h2.section-heading { font-size: var(--heading-font-size); line-height: var(--heading-line-height); margin: var(--heading-margin) 0; }
 .section-heading { margin-top: var(--section-margin); }
 
-h3 { font-size: var(--h3-font-size);  line-height: var(--h3-line-height);  margin: var(--text-margin) 0; }
-h4 { font-size: var(--text-font-size); line-height: var(--text-line-height);  margin: var(--text-margin) 0 2px; }
+h3 { font-size: var(--sub-heading-font-size); line-height: var(--sub-heading-line-height); margin: var(--text-margin) 0; }
+h4 { margin: var(--text-margin) 0 2px; }
 h4 + p { margin-top: 2px; }
 
 .text-wide { max-width: var(--text-wide-width); }
