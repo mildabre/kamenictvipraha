@@ -7,11 +7,6 @@ h3 { font-size: var(--sub-heading-font-size); line-height: var(--sub-heading-lin
 h4 { margin: var(--text-margin) 0 2px; }
 h4 + p { margin-top: 2px; }
 
-.text-wide { max-width: var(--text-wide-width); }
-.text-standard { max-width: var(--text-standard-width); }
-.text-compact { max-width: var(--text-compact-width); }
-.text-narrow { max-width: var(--text-narrow-width); }
-
 
 /* images */
 
