@@ -1,42 +1,39 @@
 
-/*  panel  */
+/*  panels  */
 
-.base-panel { display: flex; flex-direction: column; align-items: center; padding: 6px 0;  border-radius: 3px; gap: 8px; max-width: var(--panel-width); margin-top: var(--box-margin);  margin-bottom: var(--box-margin); }
+.panel { display: flex; flex-direction: column; align-items: center; padding: 6px 0;  border-radius: 3px; gap: 8px; max-width: var(--panel-width); margin-top: var(--box-margin);  margin-bottom: var(--box-margin); }
 
-.base-panel h2 { text-align: center; margin: 8px 0; font-size: 29px; letter-spacing: -1px; font-weight: 700; }
-.base-panel .text { text-align: center;  margin: 8px 0; }
-.base-panel .label-button-wrapper { margin: 20px 0; display: flex; gap:12px; }
-.base-panel .label-button-link { font-weight: 700; padding: 0 20px;  border-radius: 28px; font-size: 26px; display: block; width: fit-content;margin: 0 auto; line-height: 40px; height: 40px; letter-spacing: -2px; word-spacing: 2px; text-decoration: none; white-space: nowrap; background-position: 12px center;  background-repeat: no-repeat; }
-.base-panel .phone-link { cursor: default; }
-.base-panel .small-button-link { font-size: 18px; line-height: 38px; height: 38px; font-weight: normal; letter-spacing: 0; }
-.base-panel .small-button-link span { position: relative; top: -1px; }
+.panel h2 { text-align: center; margin: 8px 0; font-size: 29px; letter-spacing: -1px; font-weight: 700; }
+.panel .text { text-align: center;  margin: 8px 0; }
+.panel .label-button-wrapper { margin: 20px 0; display: flex; gap:12px; }
+.panel .label-button-link { font-weight: 700; padding: 0 20px;  border-radius: 28px; font-size: 26px; display: block; width: fit-content;margin: 0 auto; line-height: 40px; height: 40px; letter-spacing: -2px; word-spacing: 2px; text-decoration: none; white-space: nowrap; background-position: 12px center;  background-repeat: no-repeat; }
+.panel .phone-link { cursor: default; }
+.panel .small-button-link { font-size: 18px; line-height: 38px; height: 38px; font-weight: normal; letter-spacing: 0; }
+.panel .small-button-link span { position: relative; top: -1px; }
 
 .phone-text-link { color: white; text-decoration: none; }
 
-.express-panel { background-color: var(--metalblack); }
-.express-panel h2 { color: white; letter-spacing: 0; }
-.express-panel .text { color: white; }
-.express-panel .text strong { font-weight: normal; color: var(--sandyellow); }
-.express-panel .mail-link { color: var(--sandyellow-strong); padding: 3px 14px 4px;  border-radius: 16px; }
-.express-panel .mail-link:hover {  background-color: #fff3; }
-.express-panel .label-button-link { padding-left: 47px; background-color: var(--sandyellow); color: black;  background-image: url("images/icons/content/phone-black-28.png"); }
+.panel-express { background-color: var(--metalblack); }
+.panel-express h2 { color: white; letter-spacing: 0; }
+.panel-express .text { color: white; }
+.panel-express .text strong { font-weight: normal; color: var(--sandyellow); }
+.panel-express .mail-link { color: var(--sandyellow-strong); padding: 3px 14px 4px;  border-radius: 16px; }
+.panel-express .mail-link:hover {  background-color: #fff3; }
+.panel-express .label-button-link { padding-left: 47px; background-color: var(--sandyellow); color: black;  background-image: url("images/icons/content/phone-handset-black.28.png"); }
 
-.light-panel { background-color: var(--lightgrey); }
-.light-panel h2 { color: var(--metalblack-x); }
-.light-panel .text { color: black; }
-.light-panel .text strong { font-weight: normal; color: blue; }
-.light-panel .label-button-link { background-color: var(--metalblack); color: white; }
-.light-panel .label-button-link:hover { background-color: var(--metalblack-hover); }
+.panel-light { background-color: var(--lightgrey); }
+.panel-light h2 { color: var(--metalblack-x); }
+.panel-light .text { color: black; }
+.panel-light .text strong { font-weight: normal; color: blue; }
+.panel-light .label-button-link { background-color: var(--metalblack); color: white; }
+.panel-light .label-button-link:hover { background-color: var(--metalblack-hover); }
 
-.light-panel .centered-box {  width: fit-content;  margin: 0 auto; text-align: left; }
+.panel-light .centered-box { width: fit-content; margin: 0 auto; text-align: left; }
 
-
-@media (max-width: 610px)
-{
+@media (max-width: 610px) {
     ul.dot li { background-position-y: -2px; /* fix android */ }
 }
 
-@media (max-width: 520px)
-{
-    .base-panel { margin-inline: var(--box-margin-reduced); }
+@media (max-width: 520px) {
+    .panel { margin-inline: var(--box-margin-inline); }
 }
