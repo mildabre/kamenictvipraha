@@ -38,5 +38,5 @@
 
 @media (max-width: 520px)
 {
-    .base-panel { margin-inline: var(--panel-margin-horizontal-mobile); }
+    .base-panel { margin-inline: var(--box-margin-reduced); }
 }
