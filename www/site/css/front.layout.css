@@ -15,8 +15,7 @@
 
 /* side breakpoint */
 
-@media (max-width: 920px)
-{
+@media (max-width: 920px) {
     .column-grid-view { display: none; }
     .column-flow-view { display: block; }
 }
@@ -26,8 +25,7 @@
 
 .article-container {}
 
-@media (max-width: 520px)
-{
+@media (max-width: 520px) {
     .article-container h1, .article-container h2 { margin-left: 2px; }
     .content-container { margin: 0 var(--content-margin-mobile); }
 }

@@ -29,13 +29,11 @@
 .scroll-up-button { background-image: url("images/icons/menu/scroll-up-white.17.png"); }
 .scroll-down-button { background-image: url("images/icons/menu/scroll-down-white.17.png"); }
 
-@media (max-width: 1060px)
-{
+@media (max-width: 1060px) {
     .toggle-menu a { max-width: max-content; }
 }
 
-@media (max-width: 520px)
-{
+@media (max-width: 520px) {
     .toggle-menu-body { flex-flow: column nowrap; align-items: stretch; gap: 1px; }
     .toggle-menu-body a { max-width: none; }
 
