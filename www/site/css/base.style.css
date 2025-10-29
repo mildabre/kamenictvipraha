@@ -1,45 +1,33 @@
 body {
     --font-family: system-ui;
-    --lightgrey: #dfe1e1;
-    --metalblack: #3a3d4d;
-    --metalblack-x: #23252f;
-    --metalblack-hover: #3a3d4ddd;
-
-    --sandyellow: #f1f181;
-    --sandyellow-strong: #fafa72;
-
-    /* buttons */
-    --button-color: #313025;
-    --button-color-hover: #313025dd;
-    --button-color-selected: #9e9b76;
-    --button-color-selected-hover: #9e9b76e9;
-
-    /* header/footer */
-    --sandygrey: #bebba3;
-    --sandywarmgrey: #c8c1af;
-    --sandygrey-hover: #a2a08c;
-    --sandyblack: #1b1c15;
 
     --box-margin: 28px;
     --box-margin-large: 38px;
     --box-margin-x-large: 44px;
+    --box-margin-reduced: 22px;
+    --box-margin-inline: 0.7%;
 
     --section-margin: 48px;
     --content-margin: 2.8%;
     --content-margin-mobile: 1.8%;
     --portrait-margin: 6.0%;
     --panel-width: 620px;
-    --panel-margin-horizontal-mobile: 0.7%;
 
     --text-font-size: 16px;
     --text-line-height: 24px;
     --text-margin: 16px;
-    --text-margin-small: 8px;
+    --text-margin-small: 6px;
     --text-margin-mobile: 12px;
 
-    --h3-font-size: 18px;
-    --h3-line-height: 26px;
-    --heading-margin: 24px;
+    --heading-font-size: 30px;
+    --heading-line-height: 40px;
+    --heading-margin: 22px;
+    --sub-heading-font-size: 19px;
+    --sub-heading-line-height: 24px;
+    --sub-heading-margin: 16px;
+    --heading-panel-font-size: 24px;
+    --heading-panel-line-height: 32px;
+    --heading-panel-margin: 16px;
 
     --text-wide-width: 86ch;
     --text-standard-width: 70ch;
@@ -50,6 +38,26 @@ body {
     --menu-gap: 8px;
     --medium-transition: background-color 0.18s ease-in-out;
     --fast-transition: background-color 0.05s ease-in-out;
+
+    /* colors */
+
+    --lightgrey: #dfe1e1;
+    --metalblack: #3a3d4d;
+    --metalblack-x: #23252f;
+    --metalblack-hover: #3a3d4ddd;
+
+    --sandyellow: #f1f181;
+    --sandyellow-strong: #fafa72;
+
+    --button-color: #313025;
+    --button-color-hover: #313025dd;
+    --button-color-selected: #9e9b76;
+    --button-color-selected-hover: #9e9b76e9;
+
+    --sandygrey: #bebba3;
+    --sandywarmgrey: #c8c1af;
+    --sandygrey-hover: #a2a08c;
+    --sandyblack: #1b1c15;
 }
 
 
@@ -81,29 +89,43 @@ table td { vertical-align: top; }
 .center-container { width: fit-content; margin: var(--box-margin) auto  var(--box-margin-large); }
 .text-container { max-width: 880px; margin: var(--box-margin) 0; }
 
+
+/* fonts */
+
+body { font-family: var(--font-family), sans-serif; }
+
+
 /* text */
+
+p, td, tr, li, h4 { font-size: var(--text-font-size); line-height: var(--text-line-height); }
+p, ul { margin-block: var(--text-margin); }
 
 ul li { margin-bottom: var(--list-item-margin); }
 ul li:last-child { margin-bottom: 0; }
 ul.dot, ul.not-dot { padding-left:0; margin-left: 3px; }
-ul.dot li { list-style-type:none; padding-left:18px; background:url(images/icons/content/dot-black.png) no-repeat left -1px; }
-ul li.list-sub-item { margin-left: 28px;}
+ul.dot li { list-style-type:none; padding-left:19px; background:url(images/icons/content/dot-black.png) no-repeat left -1px; }
+ul li.list-sub-item { margin-left: 28px; }
 ul.not-dot li { list-style-type:none; }
 
-p, td, tr, li, h3 { line-height: var(--text-line-height);}
-p, ul { margin-top: var(--text-margin); margin-bottom: var(--text-margin); }
 
-.text-nowrap { white-space: nowrap;}
-.text-center { text-align: center;}
+/* text alignment */
 
-/* fonts */
+td.nowrap, th.nowrap, span.nowrap, strong.nowrap { white-space: nowrap; }
+td.center, th.center { text-align: center; }
+td.right, th.right, p.right { text-align: right; }
 
-body { font-family: var(--font-family), sans-serif; font-size: var(--text-font-size); }
+
+/* text shaping */
+
+.text-wide { max-width: var(--text-wide-width); }
+.text-standard { max-width: var(--text-standard-width); }
+.text-compact { max-width: var(--text-compact-width); }
+.text-narrow { max-width: var(--text-narrow-width); }
 
 
 /* table */
 
-.table, .base-table { margin: var(--text-margin) 0; }
+.table { margin: var(--text-margin) 0; }
 .box-container .table { margin-top: 0; margin-bottom: 0;}
 .stretch-table { width: 100%; }
 .table td { padding: 4px 15px; border:1px solid var(--lightgrey); line-height: var(--text-line-height); }
