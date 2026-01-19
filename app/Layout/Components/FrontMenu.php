@@ -10,20 +10,19 @@ final class FrontMenu extends ToggleMenu
 {
     protected const array MenuItems = [
         '@home' => 'Úvod',
-        'sochy-kamenicke-prvky' => 'Sochy a kamenické prvky',
-        'kamenne-nahrobky' => 'Kamenné náhrobky',
-        'sekani-pisma' => 'Sekání písma',
-        'gravirovani-motivu' => 'Gravírování motivů',
+        'hrbitovni-architektura' => 'Hřbitovní architektura',
+        'renovace-restaurovani' => 'Renovace a restaurování',
+        'pismo-gravirovani' => 'Písmo a gravírování',
+        'socharska-tvorba' => 'Sochařská tvorba',
         '#kontakt' => 'Kontakt',
     ];
 
     public function getCurrentKey(): ?string
     {
-        if($this->presenter->name === 'Front:Content'){
-            return $this->sid ?? self::HomeKey;
-
-        }else{
+        if ($this->presenter->name !== 'Front:Content') {
             return null;
         }
+
+        return $this->sid ?? self::HomeKey;
     }
 }
