@@ -1,46 +1,63 @@
 {
-	"name": "nette/web-project",
-	"description": "Nette: Standard Web Project",
-	"keywords": ["nette"],
+	"name": "mildabre/kamenictvi",
+	"description": "Commercial website, powered by Bite",
+	"keywords": ["kamenictvi"],
 	"type": "project",
-	"license": ["MIT", "BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+	"authors": [
+		{
+			"name": "Miloš Brecher"
+		}
+	],
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/mildabre/bite.git"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/mildabre/bite-assets.git"
+		}
+	],
 	"require": {
-		"php": ">= 8.4",
+		"php": "^8.4",
 		"ext-mbstring": "*",
 		"ext-intl": "*",
 		"ext-pdo": "*",
-		"nette/application": "^3.2.3",
-		"nette/assets": "^1.0.0",
-		"nette/bootstrap": "^3.2.6",
-		"nette/database": "^3.2",
-		"nette/di": "^3.2",
-		"nette/forms": "^3.2",
-		"nette/http": "^3.3",
-		"nette/mail": "^4.0",
-		"nette/robot-loader": "^4.0",
-		"nette/security": "^3.2",
-		"nette/utils": "^4.0",
-		"latte/latte": "^3.0",
-		"tracy/tracy": "^2.10"
-    },
+		"mildabre/bite": "^0.1",
+		"mildabre/bite-assets": "^0.1",
+		"cweagans/composer-patches": "^1.7",
+		"oomphinc/composer-installers-extender": "^2.0"
+	},
 	"require-dev": {
 		"nette/tester": "^2.5",
-		"symfony/thanks": "^1",
 		"phpstan/phpstan": "^2.1"
 	},
 	"autoload": {
 		"psr-4": {
-			"App\\": "app",
-			"Bite\\": "bite"
+			"App\\": "app"
+		}
+	},
+	"extra": {
+		"installer-types": ["bite-assets"],
+		"installer-paths": {
+			"www/bite": ["type:bite-assets"]
+		},
+		"patches": {
+			"nette/application": {
+				"LinkGenerator state parameters, Presenter lifecycle hooks": "vendor/mildabre/bite/patches/nette-application.patch"
+			}
+		}
+	},
+	"scripts": {
+		"phpstan": "php -d memory_limit=512M vendor/bin/phpstan analyse -c phpstan.neon"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true,
+			"oomphinc/composer-installers-extender": true,
+			"cweagans/composer-patches": true
 		}
 	},
 	"minimum-stability": "stable",
-	"config": {
-		"allow-plugins": {
-			"symfony/thanks": true
-		}
-	},
-  "scripts": {
-    "phpstan": "php -d memory_limit=512M vendor/bin/phpstan analyse -c phpstan.neon"
-  }
+	"prefer-stable": true
 }
