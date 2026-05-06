@@ -3,16 +3,13 @@
 /temp/
 /log/
 /vendor/
-/bite/
-/test/
 
 /config/local.neon
 /config/staging.neon
 /config/production.neon
 
-/www/bite/
 /www/site/photo/
-
+/www/bite/
 
 doc/
 pack/
