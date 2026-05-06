@@ -4,30 +4,23 @@ declare(strict_types=1);
 
 namespace App\Presentation\Front\Content;
 
-use App\Layout\Components\FrontMenu;
-use App\Layout\Presenter\FrontLayout;
-use App\Layout\Presenter\Types\FrontLayoutTemplate;
-use Bite\Exceptions\Request\ContentNotFoundException;
-use Bite\Presenter\AbstractPresenter;
+use App\Presentation\Components\BasePresenter\BasePresenter;
+use App\Presentation\Components\Controls\FrontMenu;
+use App\Presentation\Components\Layout\FrontLayout;
+use Bite\Exceptions\Http\ContentNotFoundException;
 use Nette\Application\Attributes\Parameter;
 
-/**
- * @property FrontLayoutTemplate $template
- */
-class ContentPresenter extends AbstractPresenter
+class ContentPresenter extends BasePresenter
 {
     use FrontLayout;
 
     #[Parameter]
     public ?string $sid = null;
 
-    public function __construct()
-    {}
-
     public function actionArticle(): void
     {
         $frontMenu = new FrontMenu()->setSid($this->sid);
-        $this->add($frontMenu);
+        $this->attach($frontMenu);
 
         $key = $frontMenu->getCurrentKey();
         $file = __DIR__."/templates/pages/$key.latte";
