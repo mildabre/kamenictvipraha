@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Presentation\Error\FrontError;
 
-use App\Layout\Presenter\FrontLayout;
+use App\Presentation\Components\Layout\FrontLayout;
 use App\Presentation\Error\RequestError\RequestErrorTrait;
-use Bite\Attributes\Error;
+use Bite\Presenter\Attributes\Error;
 use Bite\Presenter\AbstractPresenter;
 
 #[Error]
