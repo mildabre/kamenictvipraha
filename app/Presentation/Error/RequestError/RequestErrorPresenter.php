@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace App\Presentation\Error\RequestError;
 
 use Bite\DI\Config;
-use Bite\Exceptions\Request\ContentNotFoundException;
-use Bite\Exceptions\Request\FeatureDisabledException;
-use Bite\Security\Exceptions\AccessDeniedException;
+use Bite\Exceptions\Http\AccessDeniedException;
+use Bite\Exceptions\Http\ContentNotFoundException;
+use Bite\Exceptions\Http\DisabledException;
 use Nette\Application\IPresenter;
 use Nette\Application\Request;
 use Nette\Application\Response;
@@ -32,7 +32,7 @@ final class RequestErrorPresenter implements IPresenter
         if ($errorType === 'NotFoundType') {
             [$title, $message] = match ($exception::class) {
                 ContentNotFoundException::class => ['Not Found', $exception->getMessage() ?: 'Stránka nebyla nalezena'],
-                FeatureDisabledException::class => ['Disabled', 'Funkce je zablokovaná'],
+                DisabledException::class => ['Disabled', 'Funkce je zablokovaná'],
                 default => ['Not Found', 'Stránka nebyla nalezena'],
             };
         }
