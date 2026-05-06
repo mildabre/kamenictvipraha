@@ -39,14 +39,14 @@
     .button-link-bar { justify-content: center; }
 }
 
-.button-link { padding: 7px 22px 9px;  border-radius: 3px; text-decoration: none; text-align: center; background-color: var(--button-color); color: white; white-space: nowrap; background-repeat: no-repeat; }
-.button-link:hover {  background-color: var(--button-color-hover); }
-.button-link.selected { background-color: var(--button-color-selected); }
-.button-link.selected:hover { background-color: var(--button-color-selected-hover); }
+.nav-button { padding: 7px 22px 9px;  border-radius: 3px; text-decoration: none; text-align: center; background-color: var(--button-color); color: white; white-space: nowrap; background-repeat: no-repeat; }
+.nav-button:hover { background-color: var(--button-color-hover); }
+.nav-button.selected { background-color: var(--button-color-selected); }
+.nav-button.selected:hover { background-color: var(--button-color-selected-hover); }
 
-.next-button { background-image: url("images/icons/common/next-white.png"); }
-.next-button-black { background-image: url("images/icons/common/next-black.png"); }
+.icon-next { background-image: url("images/icons/common/next-white.png"); }
+.icon-next-black { background-image: url("images/icons/common/next-black.png"); }
 .back-button, .back-icon { background-image: url("images/icons/common/back-white.png"); }
 .back-button-black { background-image: url("images/icons/common/back-black.png"); }
-.next-button, .next-button-black { padding-right: 38px; background-position: right center; }
+.icon-next, .icon-next-black { padding-right: 38px; background-position: right center; }
 .back-button, .back-button-black { padding-left: 32px; background-position: left center; }

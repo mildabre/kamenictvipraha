@@ -13,9 +13,9 @@
 .toggle-menu-toggler { position:relative; padding: 10px 12px 12px; cursor: pointer; }
 .toggle-menu-toggler:hover { background-color: var(--button-color); }
 
-.collapse-caption { display: none;}
-.toggle-menu-toggler-collapse .collapse-caption { display: initial; }
-.toggle-menu-toggler-collapse .expand-caption { display: none; }
+.caption-collapse { display: none;}
+.toggle-menu-toggler-collapse .caption-collapse { display: initial; }
+.toggle-menu-toggler-collapse .caption-expand { display: none; }
 
 .toggler-icon { width: 22px; height: 22px; position:absolute; right: 16px; top: 10px; background-position: center top 0;  background-repeat: no-repeat;  background-image: url("images/icons/menu/toggler-icon-white.png"); }
 .toggle-menu-toggler-collapse .toggler-icon { background-position-y: -50px; }
@@ -25,9 +25,9 @@
 
 /* scroll buttons */
 
-.scroll-up-button, .scroll-down-button { padding-right: 38px; background-position: right center; }
-.scroll-up-button { background-image: url("images/icons/menu/scroll-up-white.17.png"); }
-.scroll-down-button { background-image: url("images/icons/menu/scroll-down-white.17.png"); }
+.icon-scroll-up, .icon-scroll-down { padding-right: 38px; background-position: right center; }
+.icon-scroll-up { background-image: url("images/icons/menu/scroll-up-white.17.png"); }
+.icon-scroll-down { background-image: url("images/icons/menu/scroll-down-white.17.png"); }
 
 @media (max-width: 1060px) {
     .toggle-menu a { max-width: max-content; }
@@ -41,8 +41,8 @@
     .toggle-menu-bottom { margin: 0 5px 5px; }
 
     .toggle-menu-body .button-link { padding: 12px 22px 14px; border-radius: 0; }
-    .scroll-up-button { background-image: url("images/icons/menu/scroll-up-white.20.png"); }
-    .scroll-down-button { background-image: url("images/icons/menu/scroll-down-white.20.png"); }
+    .icon-scroll-up { background-image: url("images/icons/menu/scroll-up-white.20.png"); }
+    .icon-scroll-down { background-image: url("images/icons/menu/scroll-down-white.20.png"); }
 
     .toggle-menu-top .button-link:last-child { border-radius: 0 0 5px 5px; }
     .toggle-menu-top .toggle-menu-toggler.toggle-menu-toggler-collapse { border-radius: 5px 5px 0 0; }
