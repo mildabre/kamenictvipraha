@@ -7,6 +7,10 @@ application:
 
 	catchExceptions: true
 
+extensions:
+	discovery: Mildabre\ServiceDiscovery\DI\ServiceDiscoveryExtension			# required as first
+	bite: Bite\DI\BiteExtension
+
 session:
 	expiration: 14 days
 
