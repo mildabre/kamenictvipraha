@@ -8,15 +8,17 @@ use App\Presentation\Components\BasePresenter\BasePresenter;
 use App\Presentation\Components\Controls\FrontMenu;
 use App\Presentation\Components\Layout\FrontLayout;
 use Bite\Exceptions\Http\ContentNotFoundException;
+use Bite\Presenter\Http\Route;
 use Nette\Application\Attributes\Parameter;
 
-class ContentPresenter extends BasePresenter
+final class ContentPresenter extends BasePresenter
 {
     use FrontLayout;
 
     #[Parameter]
     public ?string $sid = null;
 
+    #[Route]
     public function actionArticle(): void
     {
         $frontMenu = new FrontMenu()->setSid($this->sid);
