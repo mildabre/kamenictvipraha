@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Presentation\Error\RequestError;
 
-use App\Layout\Presenter\BasePresenter;
-use Bite\Attributes\Action;
+use App\Presentation\Components\BasePresenter\BasePresenter;
+use Bite\Presenter\Http\Home;
 use Nette\Application\BadRequestException;
 
 /**
@@ -16,17 +16,17 @@ trait RequestErrorTrait
 {
     public const  string TemplateFilePath = __DIR__.'/templates/requestError.latte';
 
-    public function injectRequestError(): void
+    final public function injectRequestError(): void
     {
         $this->onStartup[] = function() {
             $forwarded = $this->getRequest()->isMethod('FORWARD');
             if (!$forwarded) {
-                throw new BadRequestException();                        // exclude direct http access
+                throw new BadRequestException();                        // exclude direct http-access
             }
         };
     }
 
-    #[Action]
+    #[Home]
     public function actionHome(string $title, string $message, string $classShortName, bool $printIdeLink, ?string $ideCaption, ?string $ideHref, string $homeHref): void
     {
         $this->template->setFile(self::TemplateFilePath);
