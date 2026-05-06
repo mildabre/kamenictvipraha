@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\Presentation\Components\BasePresenter;
+namespace App\Presentation\Components\BasePresenter;
 
 use Bite\Presenter\AbstractPresenter;
 use Bite\Presenter\Traits\Base\BaseCanonization;

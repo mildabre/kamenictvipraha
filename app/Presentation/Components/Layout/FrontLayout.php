@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\Presentation\Components\Layout;
+namespace App\Presentation\Components\Layout;
 
 use App\Presentation\Components\Controls\FrontMenu;
 use App\Presentation\Components\Layout\Types\FrontLayoutTemplate;
