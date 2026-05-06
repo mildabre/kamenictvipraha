@@ -1,9 +1,14 @@
-{templateType App\Layout\Presenter\Types\FrontLayoutTemplate}
-
-{block 'title'}Kamenictví Praha{/block}
+{templateType App\Presentation\Components\Layout\Types\FrontLayoutTemplate}
 
 
-{block 'headTitle'}Kamenictví Praha, kamenické práce a výrobky, sochy, interiérové díly, kamenné náhrobky{/block}
+{block 'title'}
+    Kamenictví Praha
+{/block}
+
+
+{block 'headTitle'}
+    Kamenictví Praha, kamenické práce a výrobky, sochy, interiérové díly, kamenné náhrobky
+{/block}
 
 
 {block 'description'}
@@ -74,7 +79,7 @@
     </div>
 
     <nav class="button-link-bar">
-        <a n:href="article, sid: 'sekani-pisma'" class="button-link next-button">Další ukázky písma</a>
+        <a href="{href('article', 'sekani-pisma')}" class="nav-button icon-next">Další ukázky písma</a>
     </nav>
 
 
@@ -91,7 +96,7 @@
     </div>
 
     <nav class="button-link-bar">
-        <a n:href="article, sid: 'gravirovani-motivu'" class="button-link next-button">Další ukázky gravírování</a>
+        <a href="{href('article', 'pismo-gravirovani')}" class="nav-button icon-next">Další ukázky gravírování</a>
     </nav>
 
     <h2 class="section-heading" id="provozovna" data-target-provozovna-bottom>Provozovna</h2>
