@@ -33,8 +33,8 @@
 
             <p>Pokračujte zde:</p>
 
-            <nav class="button-link-bar">
-                <a n:href="$homeHref" class="button-link next-button">Home</a>
+            <nav class="nav-bar">
+                <a n:href="$homeHref" class="nav-button icon-next">Home</a>
             </nav>
         </div>
 
@@ -51,8 +51,7 @@
 {block 'analytics'}{/block}
 
 
-{block 'head'}
-    {include parent}
+{block 'head'} {include parent}
 
     <style>
         .content-container { display: flex; flex-direction: column; align-items: center; justify-content: center; }
@@ -70,7 +69,7 @@
         .error-message-text { padding: 0 28px; }
 
         h3 { font-weight: 600;  font-size: 21px;}
-        .button-link-bar { display: flex; flex-flow: row wrap; justify-content: center; margin: var(--box-margin-large) 0; }
+        .nav-bar { display: flex; flex-wrap: wrap; justify-content: center; margin: var(--box-margin-large) 0; }
 
         @media (max-width: 500px) {
             .content-container { align-items: stretch; }
