@@ -25,7 +25,7 @@ final class ContentPresenter extends BasePresenter
         $this->attach($frontMenu);
 
         $key = $frontMenu->getCurrentKey();
-        $file = __DIR__."/templates/pages/$key.latte";
+        $file = __DIR__ . "/templates/pages/$key.latte";
 
         if (!is_file($file)) {
             throw new ContentNotFoundException();
