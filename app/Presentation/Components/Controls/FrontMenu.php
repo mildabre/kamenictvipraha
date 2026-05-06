@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Layout\Components;
+namespace app\Presentation\Components\Controls;
 
 use Bite\Components\UI\Menu\ToggleMenu;
 

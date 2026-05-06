@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Layout\Presenter\Types;
+namespace app\Presentation\Components\Layout\Types;
 
 use Bite\Template\LayoutTemplate;
 
