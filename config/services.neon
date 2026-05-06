@@ -1,29 +1,36 @@
 services:
-	- App\Core\Router\RouterFactory::create()
+	router:
+		create: App\Infrastructure\Router\RouterFactory::create()
 
-	- Bite\DI\Config( %rootDir%, %appDir%, %wwwDir%, %debugMode%, %isLocalServer%, %isProductionServer%, %templateFolder%, %publicFolder%, %canonizeBasePath% )
+	canonizer:
+		class: Bite\Components\BaseCanonizer\BaseCanonizer
+		arguments:
+			- @bite.config
+			- @http.request
 
-	- Bite\Components\AssetLink
+	assetLink:
+		class: Bite\Components\AssetLink\AssetLink
+		arguments:
+			- @bite.config
 
-	- Bite\Components\BaseCanonizer( %publicFolder% )
+	checkRunner:
+		class: Bite\Reflection\Checker\ComponentCheckRunner
 
-	- Bite\Components\Inspector\Inspector( %tools% )
+	security.user:
+		class: Bite\Security\AuthUser
+		alteration: true
 
-search:
-	application:
-		in: %appDir%
-		implements: Bite\DI\AsService
+	textHtmlParser:
+		class: Bite\Components\Text\TextHtmlParser
 
-	layout:
-		in: '%appDir%/Layout'
-		extends: Bite\Controls\ActiveControl
+discovery:
+	in:
+		- %appDir%
 
-	modules:
-		in: '%appDir%/Presentation'
-		extends:
-			- Bite\Controls\ActiveControl
-			- Bite\Model\Abstract\Repository
+	type:
+		- Bite\Control\AbstractControl
+		- Bite\Persistence\Abstract\Repository
 
-decorator:
-	Bite\DI\Injectable:
-		inject: true
+	enableInject:
+		- Bite\Control\AbstractControl
+		- Bite\Persistence\Abstract\Repository
