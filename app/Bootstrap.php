@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App;
 
+use Bite\DI\BiteExtension;
 use Nette;
 use Nette\Bootstrap\Configurator;
 
@@ -23,6 +24,8 @@ class Bootstrap
     {
         $this->initializeEnvironment();
         $this->setupContainer();
+        BiteExtension::boot($this->rootDir . '/temp');
+
         return $this->configurator->createContainer();
     }
 
