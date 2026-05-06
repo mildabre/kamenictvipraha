@@ -24,7 +24,3 @@ php:
 
 latte:
 	templateClass: Bite\Template\DefaultTemplate
-
-parameters:
-	templateFolder: Layout/templates
-	publicFolder: www
