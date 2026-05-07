@@ -1,21 +1,11 @@
 {
 	"name": "mildabre/kamenictvi",
-	"description": "Commercial website, powered by Bite",
-	"keywords": ["kamenictvi"],
+	"description": "Commercial website Tomáš Čierny",
 	"type": "project",
-	"authors": [
-		{
-			"name": "Miloš Brecher"
-		}
-	],
 	"repositories": [
 		{
 			"type": "vcs",
 			"url": "https://github.com/mildabre/bite.git"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/mildabre/bite-assets.git"
 		}
 	],
 	"require": {
@@ -24,9 +14,7 @@
 		"ext-intl": "*",
 		"ext-pdo": "*",
 		"mildabre/bite": "^0.1",
-		"mildabre/bite-assets": "^0.1",
-		"cweagans/composer-patches": "^1.7",
-		"oomphinc/composer-installers-extender": "^2.0"
+		"cweagans/composer-patches": "^1.7"
 	},
 	"require-dev": {
 		"nette/tester": "^2.5",
@@ -38,10 +26,6 @@
 		}
 	},
 	"extra": {
-		"installer-types": ["bite-assets"],
-		"installer-paths": {
-			"www/bite": ["type:bite-assets"]
-		},
 		"patches": {
 			"nette/application": {
 				"LinkGenerator state parameters, Presenter lifecycle hooks": "vendor/mildabre/bite/patches/nette-application.patch"
@@ -53,8 +37,6 @@
 	},
 	"config": {
 		"allow-plugins": {
-			"composer/installers": true,
-			"oomphinc/composer-installers-extender": true,
 			"cweagans/composer-patches": true
 		}
 	},
