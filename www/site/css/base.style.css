@@ -16,28 +16,28 @@ body {
     --text-font-size: 16px;
     --text-line-height: 24px;
     --text-margin: 16px;
-    --text-margin-small: 6px;
+    --text-margin-small: 10px;
     --text-margin-mobile: 12px;
 
     --heading-font-size: 30px;
     --heading-line-height: 40px;
     --heading-margin: 22px;
-    --sub-heading-font-size: 19px;
-    --sub-heading-line-height: 24px;
-    --sub-heading-margin: 16px;
+    --sub-heading-font-size: 20px;
+    --sub-heading-line-height: 25px;
+    --sub-heading-margin: 17px;
     --heading-panel-font-size: 24px;
     --heading-panel-line-height: 32px;
     --heading-panel-margin: 16px;
 
-    --text-wide-width: 86ch;
-    --text-standard-width: 70ch;
-    --text-compact-width: 60ch;
-    --text-narrow-width: 46ch;
+    --text-width-wide: 86ch;
+    --text-width-standard: 70ch;
+    --text-width-compact: 60ch;
+    --text-width-narrow: 46ch;
 
     --list-item-margin: 5px;
     --menu-gap: 8px;
-    --medium-transition: background-color 0.18s ease-in-out;
-    --fast-transition: background-color 0.05s ease-in-out;
+    --medium-transition: background-color 0.18s ease-in-out, border-color 0.18s ease-in-out;
+    --fast-transition: background-color 0.05s ease-in-out, border-color 0.05s ease-in-out;
 
     /* colors */
 
@@ -65,7 +65,7 @@ body {
 
 body { margin: 0; background-position: center center;  background-repeat: repeat; }
 body * { box-sizing: border-box; }
-html { overflow-y: scroll; }
+html { overflow-y: auto; scrollbar-gutter: stable; }
 
 table { border-collapse: collapse; }
 table td { vertical-align: top; }
@@ -117,10 +117,10 @@ td.right, th.right, p.right { text-align: right; }
 
 /* text shaping */
 
-.text-wide { max-width: var(--text-wide-width); }
-.text-standard { max-width: var(--text-standard-width); }
-.text-compact { max-width: var(--text-compact-width); }
-.text-narrow { max-width: var(--text-narrow-width); }
+.text-wide { max-width: var(--text-width-wide); }
+.text-standard { max-width: var(--text-width-standard); }
+.text-compact { max-width: var(--text-width-compact); }
+.text-narrow { max-width: var(--text-width-narrow); }
 
 
 /* table */
