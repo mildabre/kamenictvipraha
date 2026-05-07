@@ -12,8 +12,8 @@ final class FrontMenu extends ToggleMenu
         '@home' => 'Úvod',
         'hrbitovni-architektura' => 'Hřbitovní architektura',
         'renovace-restaurovani' => 'Renovace a restaurování',
-        'pismo-gravirovani' => 'Písmo a gravírování',
         'socharska-tvorba' => 'Sochařská tvorba',
+        'pismo-gravirovani' => 'Písmo a gravírování',
         '#kontakt' => 'Kontakt',
     ];
 
