@@ -10,7 +10,7 @@ h4 + p { margin-top: 2px; }
 
 /* images */
 
-.image-container { display: flex; flex-wrap: wrap; gap: var(--box-margin-large); margin: var(--box-margin) 2px var(--box-margin-large); }
+.image-container { display: flex; flex-wrap: wrap; align-items: flex-end; gap: var(--box-margin-large); margin: var(--box-margin) 2px var(--box-margin-large); }
 .image-container img { display: block; max-width: 100%; }
 .image-container figcaption { margin: var(--text-margin-small) 0 0 2px; }
 
