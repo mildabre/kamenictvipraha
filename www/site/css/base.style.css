@@ -10,7 +10,6 @@ body {
     --section-margin: 48px;
     --content-margin: 2.8%;
     --content-margin-mobile: 1.8%;
-    --portrait-margin: 6.0%;
     --panel-width: 620px;
 
     --text-font-size: 16px;
@@ -34,10 +33,22 @@ body {
     --text-width-compact: 60ch;
     --text-width-narrow: 46ch;
 
+    --content-margin-inline: 2.8%;
+    --content-margin-inline-mobile: 1.8%;
+    --portrait-margin-inline: 6.0%;
+
+    --nav-menu-gap: 10px;
+    --nav-menu-gap-mobile: 6px;
+    --nav-bar-gap: 12px;
     --list-item-margin: 5px;
-    --menu-gap: 8px;
+
+
+    /* transitions */
+
+    --slow-transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
     --medium-transition: background-color 0.18s ease-in-out, border-color 0.18s ease-in-out;
     --fast-transition: background-color 0.05s ease-in-out, border-color 0.05s ease-in-out;
+
 
     /* colors */
 
@@ -63,14 +74,18 @@ body {
 
 /* common */
 
-body { margin: 0; background-position: center center;  background-repeat: repeat; }
-body * { box-sizing: border-box; }
 html { overflow-y: auto; scrollbar-gutter: stable; }
-
+body * { box-sizing: border-box; }
+body { margin: 0; background-position: center center; background-attachment: fixed;  background-repeat: repeat; }
 table { border-collapse: collapse; }
 table td { vertical-align: top; }
+figure, figcaption { margin: 0; }
+caption { caption-side: top; text-align: left; font-weight: bold; margin: 0; }
 
-.medium-transition, a, .standard-button, .slim-button, input[type='submit'] { transition: var(--medium-transition) }
+/* transitions */
+
+.slow-transition { transition: var(--slow-transition) }
+.medium-transition, a, .button-standard, .button-slim, input[type='submit'] { transition: var(--medium-transition) }
 .fast-transition { transition: var(--fast-transition) }
 
 

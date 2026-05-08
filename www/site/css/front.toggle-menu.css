@@ -5,7 +5,7 @@
 .toggle-menu-top { margin-top: 11px; }
 .toggle-menu-bottom { margin-bottom: 11px; }
 
-.toggle-menu-body { display: flex; flex-flow: row wrap; align-items: flex-end; gap: var(--menu-gap); }
+.toggle-menu-body { display: flex; flex-flow: row wrap; align-items: flex-end; gap: var(--nav-menu-gap); }
 .toggle-menu-body a { flex-grow: 1; }
 
 /* toggle button */
