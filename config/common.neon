@@ -14,6 +14,10 @@ extensions:
 session:
 	expiration: 14 days
 
+http:
+	headers:
+		X-Powered-By: false
+
 di:
 	export:
 		parameters: no
