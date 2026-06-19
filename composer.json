@@ -17,8 +17,7 @@
 		"cweagans/composer-patches": "^1.7"
 	},
 	"require-dev": {
-		"nette/tester": "^2.5",
-		"phpstan/phpstan": "^2.1"
+		"nette/tester": "^2.5"
 	},
 	"autoload": {
 		"psr-4": {
@@ -31,9 +30,6 @@
 				"LinkGenerator state parameters, Presenter lifecycle hooks": "vendor/mildabre/bite/patches/nette-application.patch"
 			}
 		}
-	},
-	"scripts": {
-		"phpstan": "php -d memory_limit=512M vendor/bin/phpstan analyse -c phpstan.neon"
 	},
 	"config": {
 		"allow-plugins": {
