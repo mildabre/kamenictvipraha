@@ -46,7 +46,7 @@ class Bootstrap
             $this->setOpenBasedir();
 
         }else{
-            $this->configurator->addConfig($configDir.'/staging.neon');
+            $this->configurator->addConfig($configDir.'/production.neon');
         }
 
         $this->configurator->addConfig($configDir.'/common.neon');
