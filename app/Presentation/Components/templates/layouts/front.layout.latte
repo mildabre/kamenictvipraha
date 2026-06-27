@@ -6,14 +6,24 @@
 {block 'head'}{/block}
 
 
-{block 'siteTitle'}
+{block 'siteRobots'}
+    <meta name="robots" content="{$isProductionServer ? 'index' : 'noindex'}">
+{/block}
+
+
+{block 'siteTitleSlot'}
 	<title>{ifset 'headTitle'}{include 'headTitle'}{else}{ifset 'title'}{include 'title'} - {/ifset}Kamenictví Praha{/ifset}</title>
 {/block}
 
 
-{block 'analytics'}
-    {if $isProductionServer}
-        {read($baseTemplateDir.'/analytics.html', true)}
+{block 'siteDescriptionSlot'}
+    {ifset 'siteDescription'}<meta name="description" content="{include 'siteDescription'}">{/ifset}
+{/block}
+
+
+{block 'siteAnalytics'}
+    {if $isProductionServer || true}
+        {read($baseTemplateDir.'/assets/analytics.html', true)}
     {/if}
 {/block}
 
